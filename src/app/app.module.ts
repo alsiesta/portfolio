@@ -9,11 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { HeaderComponent } from './header/header.component';
-
+import { GreetingsectionComponent } from './routing/greetingsection/greetingsection.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule],
+  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent],
+  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
