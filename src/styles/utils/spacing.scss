@@ -1,0 +1,54 @@
+.padding-main{
+    padding: $paddingMainTopBottom $paddingMainLeftRightMax;
+    @media(max-width: $breakpointMain){
+        padding: $paddingMainTopBottom $paddingMainLeftRightMin;
+    }
+}
+
+.margin-bottom-regular{
+    margin-bottom: $spacingRegular;
+}
+
+.margin-bottom-big{
+    margin-bottom: $spacingBig;
+}
+
+.margin-top-big{
+    margin-top: $spacingBig;
+}
+
+.margin-bottom-mid{
+    margin-bottom: $spacingMid;
+}
+
+.margin-top-mid{
+    margin-top: $spacingMid;
+}
+
+.padding-bottom-regular{
+    padding-bottom: $spacingRegular;
+}
+
+.padding-bottom-big{
+    padding-bottom: $spacingBig;
+}
+
+.padding-top-big{
+    padding-top: $spacingBig;
+}
+
+.padding-bottom-mid{
+    padding-bottom: $spacingMid;
+}
+
+.padding-top-mid{
+    padding-top: $spacingMid;
+}
+
+.margin-bottom-auto{
+    margin-bottom: auto;
+}
+
+.margin-left-auto{
+    margin-left: auto;
+}
