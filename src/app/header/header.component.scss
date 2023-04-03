@@ -4,6 +4,7 @@
   flex: 1 1 auto;
 }
 
+
 nav {
   display: flex;
   height: $menuHeight;
@@ -81,7 +82,7 @@ nav {
     background: $transparent;
     width: 100%;
     transform: translateX(100vw);
-    transition: transform 500ms ease-in-out;
+    transition: transform 250ms ease-out;
 
     a {
       font-size: 1.4rem;
@@ -96,14 +97,14 @@ nav {
 
       &.is-open {
         transform: translateX(0vw);
-        transition: transform 500ms ease-in-out;
+        transition: transform 250ms ease-in;
         display: flex;
         position: absolute;
-        top: #{$menuHeight + 2};
+        top: #{$menuHeight};
         background: $transparent;
         width: 100%;
         .menu-item {
-          line-height: $menuHeight;
+          line-height: calc($menuHeight + 20px);
           // border-bottom: 1px solid #cccccc;
         }
       }
