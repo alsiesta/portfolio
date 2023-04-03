@@ -1,0 +1,44 @@
+@import "/src/styles/utils/variables";
+
+
+:host {
+  display: flex;
+//   background-color: rgba(127, 255, 212, 0.3);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+min-height: 80vh;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  // align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  
+
+  img{
+    max-height: 450px;
+    max-width: 100%;
+    position: absolute;
+  }
+    img:nth-child(1){
+      // position: absolute;
+    }
+    img:nth-child(2) {
+      // position: absolute
+      left: 220px;
+    }
+
+    .profile-image1{
+        position: inherit;
+        left: 120px;
+    }
+
+  //   @media (min-width: 1246px) {
+  //     padding-bottom: 180px;
+  //   }
+}

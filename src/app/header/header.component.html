@@ -1,5 +1,5 @@
 
-<nav id="my-first" class="color-purple">
+<nav mat-toolbar id="nav-bar">
   <ul>
     <li class="logotype">
       <a href="#">Logotype</a>
@@ -17,14 +17,14 @@
 </nav>
 
 <!-- <mat-toolbar color="primary">
-  <span>My App</span>
+  <span>My Logo</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="material-icons">
     <mat-icon>share</mat-icon>
   </button>
-  <li mat-icon-button class="burger" (click)="toggleMenu()">
+  <span mat-icon-button (click)="toggleMenu()">
     <mat-icon class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
-  </li>
+  </span>
   <span class="menu" [class.is-open]="isMenuOpen">
    <a class="menu-item" href="#">Home</a>
 <a class="menu-item" href="#">About</a>

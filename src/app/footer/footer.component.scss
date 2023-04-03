@@ -1,0 +1,12 @@
+@import "/src/styles/utils/variables";
+
+
+:host {
+  display: flex;
+  background-color: rgba(52, 207, 155, 0.3);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+min-height: 20px;
+}

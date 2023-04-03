@@ -10,9 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { HeaderComponent } from './header/header.component';
 import { GreetingsectionComponent } from './routing/greetingsection/greetingsection.component';
+import { MainpaneComponent } from './mainpane/mainpane.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent],
+  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule,],
   providers: [],
   bootstrap: [AppComponent],
