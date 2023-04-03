@@ -1,12 +1,15 @@
 @import "/src/styles/utils/variables";
 
-// .example-spacer {
-//     flex: 1 1 auto;
-//   }
+.spacer {
+  flex: 1 1 auto;
+}
 
+nav {
+  display: flex;
+  height: $menuHeight;
+  width: 100%;
 
-#nav-bar {
-  ul {
+  div {
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,20 +21,47 @@
   }
 
   .logotype {
+    padding: 20px 20px;
+    height: calc($menuHeight - 20px);
     a {
-      padding: 0 8px;
       font-size: 1.4rem;
       text-decoration: none;
-      color: #07c;
+      color: $white;
+    }
+  }
+
+  .menu-expanded {
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    @media (max-width: $menuBreakpoint) {
+      display: none;
+    }
+
+    .menu-item {
+      padding: 0 20px;
+      height: $menuHeight;
+      line-height: $menuHeight;
+      text-decoration: none;
+      display: block;
+      // text-transform: uppercase;
+      font-style: normal;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $white;
     }
   }
 
   .burger {
-    padding: 0 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: none;
     cursor: pointer;
 
-    i {
+    :first-child {
       color: #ffffff;
       line-height: $menuHeight;
     }
@@ -41,37 +71,42 @@
     }
   }
 
-  .menu {
+  .menu-compact {
     z-index: 99;
-    display: flex;
-    align-items: center;
-text-align: center;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    top: #{$menuHeight + 2};
+    background: $transparent;
+    width: 100%;
+    transform: translateX(100vw);
+    transition: transform 500ms ease-in-out;
+
+    a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: $white;
+    }
 
     @media (max-width: $menuBreakpoint) {
-      display: none;
+      color: $white;
+      display: flex;
+      flex-direction: column;
 
       &.is-open {
-        display: block;
+        transform: translateX(0vw);
+        transition: transform 500ms ease-in-out;
+        display: flex;
         position: absolute;
         top: #{$menuHeight + 2};
         background: $transparent;
         width: 100%;
         .menu-item {
-          border-bottom: 1px solid #cccccc;
+          line-height: $menuHeight;
+          // border-bottom: 1px solid #cccccc;
         }
       }
-    }
-
-    .menu-item {
-      padding: 0 10px;
-      height: $menuHeight;
-      line-height: $menuHeight;
-      text-decoration: none;
-      display: block;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: $white;
     }
   }
 }
