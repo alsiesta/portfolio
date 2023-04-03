@@ -1,14 +1,12 @@
 @import "/src/styles/utils/variables";
 
-
 :host {
   display: flex;
-//   background-color: rgba(127, 255, 212, 0.3);
   position: relative;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-min-height: 80vh;
+  min-height: 80vh;
 }
 
 .container {
@@ -18,27 +16,88 @@ min-height: 80vh;
   position: absolute;
   width: 100%;
   top: 10px;
-  
 
-  img{
-    max-height: 450px;
+  img {
+    max-height: 550px;
     max-width: 100%;
     position: absolute;
   }
-    img:nth-child(1){
-      // position: absolute;
-    }
-    img:nth-child(2) {
-      // position: absolute
-      left: 220px;
-    }
+  img:nth-child(1) {
+    // position: absolute;
+  }
+  img:nth-child(2) {
+    // position: absolute
+    left: 220px;
+  }
 
-    .profile-image1{
-        position: inherit;
-        left: 120px;
+  .profile-image1 {
+    // top: 0px;
+    position: relative;
+    // left: 160px;  
+    
+    @media (min-width: ($breakpointExpanded +200px)) {
+      display: block;
+      left: 160px;
+      top: 10px;
     }
+    @media (max-width: ($breakpointExpanded +200px)) {
+      display: block;
+      left: 60px;
+      top: 10px;
+    }
+    @media (max-width: $breakpointExpanded) {
+      display: block;
+      left: 30px;
+      top: 10px;
+    }
+    @media (max-width: $breakpointMedium) {
+      display: block;
+      left: 30px;
+      top: 50px;
+    }
+    @media (max-width: $breakpointCompact) {
+      display: block;
+      top: 100px !important;
+      left: 10px;
+    }
+  }
+  
+}
 
-  //   @media (min-width: 1246px) {
-  //     padding-bottom: 180px;
-  //   }
+.vector {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  z-index: 1;
+
+  @media (max-width: $breakpointCompact) {
+    display: none;
+    top: 360px;
+  }
+  @media (max-width: $breakpointMedium) {
+    display: none;
+    top: 160px;
+  }
+  @media (max-width: ($breakpointExpanded )) {
+    top: 160px;
+  }
+}
+.vector2 {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+  display: none;
+
+  @media (max-width: $breakpointCompact) {
+    display: block;
+    top: 450px !important;
+  }
+  @media (max-width: $breakpointMedium) {
+    display: block;
+    top: 350px;
+  }
+  // @media  (max-width: ($breakpointExpanded +200px)) {
+  //   top: 160px;
+  // }
 }

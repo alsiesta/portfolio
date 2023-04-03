@@ -1,6 +1,6 @@
 .padding-main{
     padding: $paddingMainTopBottom $paddingMainLeftRightMax;
-    @media(max-width: $breakpointMain){
+    @media(max-width: $breakpointMedium){
         padding: $paddingMainTopBottom $paddingMainLeftRightMin;
     }
 }
