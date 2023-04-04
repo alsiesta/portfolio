@@ -35,12 +35,12 @@
     position: relative;
     // left: 160px;  
     
-    @media (min-width: ($breakpointExpanded +200px)) {
+    @media (min-width: ($breakpointExpanded (+200px))) {
       display: block;
       left: 160px;
       top: 10px;
     }
-    @media (max-width: ($breakpointExpanded +200px)) {
+    @media (max-width: ($breakpointExpanded (+200px))) {
       display: block;
       left: 60px;
       top: 10px;
@@ -97,7 +97,7 @@
     display: block;
     top: 350px;
   }
-  // @media  (max-width: ($breakpointExpanded +200px)) {
+  // @media  (max-width: ($breakpointExpanded (+200px))) {
   //   top: 160px;
   // }
 }
