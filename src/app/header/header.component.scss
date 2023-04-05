@@ -37,7 +37,7 @@ nav {
     align-items: center;
     text-align: center;
 
-    @media (max-width: $menuBreakpoint) {
+    @media (max-width: $breakpointMedium) {
       display: none;
     }
 
@@ -67,7 +67,7 @@ nav {
       line-height: $menuHeight;
     }
 
-    @media (max-width: $menuBreakpoint) {
+    @media (max-width: $breakpointMedium) {
       display: block;
     }
   }
@@ -90,7 +90,7 @@ nav {
       color: $white;
     }
 
-    @media (max-width: $menuBreakpoint) {
+    @media (max-width: $breakpointMedium) {
       color: $white;
       display: flex;
       flex-direction: column;

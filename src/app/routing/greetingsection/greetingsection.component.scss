@@ -11,59 +11,145 @@
 
 .shadows {
   position: fixed;
+  top: 50px;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   height: 95%;
   z-index: -1;
-  
+
   img:nth-child(1) {
     position: relative;
-    top: 20px;
-    left: 0px;
+    width: 400px;
+    left: -50px;
   }
-  
+
   img:nth-child(2) {
     position: relative;
-    top: 20px;
-    left: -221px;
+    width: 400px;
+    left: -200px;
   }
 }
 
+.curve-image-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  @media (max-width: $breakpointMedium) {
+    justify-content: center;
+  }
+}
 
 .profile-image1 {
   z-index: 0;
+  display: flex;
   object-fit: contain;
-  height: 470px;
-position: relative;
+  height: 600px;
+  position: absolute;
   left: 150px;
-  top: 10px;
+  top: 50px;
 
-  @media (min-width: ($breakpointExpanded (+200px))) {
-    display: block;
-    left: 160px;
-    top: -10px;
+  @media (min-width: ($breakpointExpanded + (350px))) {
+    // display: block;
+    left: 150px;
+    top: 80px;
   }
-  @media (max-width: ($breakpointExpanded (+200px))) {
+  @media (max-width: ($breakpointExpanded + (350px))) {
     display: block;
-    left: 60px;
-    top: 10px;
+    left: 150px;
+    top: 20px;
   }
-  @media (max-width: $breakpointExpanded) {
-    display: block;
+  @media (max-width: ($breakpointExpanded + (100px))) {
+    // display: block;
+    height: 500px;
     left: 30px;
     top: 10px;
   }
   @media (max-width: $breakpointMedium) {
-    display: block;
-    left: 30px;
+    // display: flex;
+    left: unset;
     top: 50px;
   }
-  @media (max-width: $breakpointCompact) {
-    display: block;
-    top: 100px !important;
-    left: 10px;
+  // @media (max-width: $breakpointCompact) {
+  //   display: block;
+  //   top: 100px !important;
+  //   left: 10px;
+  // }
+}
+
+.vector {
+  position: relative;
+  width: 100%;
+  top: 170px;
+  z-index: 1;
+
+  @media (max-width: $breakpointMedium) {
+    top: 310px;
   }
+  @media (max-width: $breakpointCompact) {
+    top: 160px;
+  }
+}
+
+.spacer {
+  width: 40%;
+  flex-grow: 1 1 auto;
+}
+
+.copy-container-child{
+  display: flex;
+
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+}
+
+.name {
+  text-align: justify;
+  display: flex;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 67px;
+  line-height: 120%;
+}
+.profession {
+  text-align: justify;
+  display: flex;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 120%;
+        text-transform: uppercase;
+
+  /* identical to box height, or 70px */
+  color: #9747ff;
+}
+
+.vertical-copy {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  width: auto;
+  margin: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 120%;
 }
 
 .copy-container-parent {
@@ -72,85 +158,5 @@ position: relative;
   align-items: flex-start;
   position: absolute;
   width: 100%;
-  height: 80vh;
-  top: 10px;
-
-  .spacer{
-    flex: 1 1 auto;
-  }
-  div {
-    z-index: 2;
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    // background-color: rgba(0, 255, 255, 0.377);
-
-    div:nth-child(2) {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      background-color: rgba(255, 102, 0, 0.781);
-      width: 10%;
-      height: 40px;
-    }
-    div:nth-child(3) {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      background-color: rgba(0, 0, 255, 0.377);
-    }
-  }
-
-  .vertical-copy {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    width: auto;
-  }
-
-  img {
-    max-height: 550px;
-    max-width: 100%;
-    position: absolute;
-  }
-}
-
-.vector {
-  position: absolute;
-  width: 100%;
-  top: 100px;
-  z-index: 1;
-
-  @media (max-width: $breakpointCompact) {
-    display: none;
-    top: 360px;
-  }
-  @media (max-width: $breakpointMedium) {
-    display: none;
-    top: 160px;
-  }
-  @media (max-width: ($breakpointExpanded )) {
-    top: 160px;
-  }
-}
-.vector2 {
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  z-index: 1;
-  display: none;
-
-  @media (max-width: $breakpointCompact) {
-    display: block;
-    top: 450px !important;
-  }
-  @media (max-width: $breakpointMedium) {
-    display: block;
-    top: 350px;
-  }
-  // @media  (max-width: ($breakpointExpanded (+200px))) {
-  //   top: 160px;
-  // }
+  top: 160px;
 }
