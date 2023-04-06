@@ -3,31 +3,33 @@
 :host {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  overflow: hidden;
-  min-height: 80vh;
+  // overflow: hidden;
+  // min-height: 80vh;
+  flex-direction: column;
+  width: 99vw;
 }
 
 .shadows {
-  position: fixed;
+  position: absolute;
   top: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 95%;
+  // height: 95%;
   z-index: -1;
 
   img:nth-child(1) {
     position: relative;
-    width: 400px;
+    width: 350px;
     left: -50px;
   }
 
   img:nth-child(2) {
     position: relative;
-    width: 400px;
+    width: 450px;
     left: -200px;
   }
 }
@@ -37,6 +39,15 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  height: 57vh;
+  @media (min-width: ($breakpointExpanded + (350px))) {
+    height: 85vh;
+
+  }
+  @media (max-width: ($breakpointExpanded + (350px))) {
+    height: 75vh;
+
+  }
   @media (max-width: $breakpointMedium) {
     justify-content: center;
   }
@@ -44,33 +55,40 @@
 
 .profile-image1 {
   z-index: 0;
+  position: absolute;
   display: flex;
   object-fit: contain;
   height: 600px;
-  position: absolute;
   left: 150px;
-  top: 50px;
+  // top: 50px;
+  bottom: 0;
 
   @media (min-width: ($breakpointExpanded + (350px))) {
     // display: block;
     left: 150px;
-    top: 80px;
+    // top: 80px;
+    height: 100%;
+    bottom: 0;
   }
   @media (max-width: ($breakpointExpanded + (350px))) {
     display: block;
     left: 150px;
     top: 20px;
+    height: 100%;
   }
   @media (max-width: ($breakpointExpanded + (100px))) {
     // display: block;
     height: 500px;
     left: 30px;
-    top: 10px;
+    // top: 10px;
+    bottom: 0;
+
   }
   @media (max-width: $breakpointMedium) {
     // display: flex;
     left: unset;
-    top: 50px;
+    // top: 50px;
+    bottom: 0;
   }
   // @media (max-width: $breakpointCompact) {
   //   display: block;
@@ -80,10 +98,13 @@
 }
 
 .vector {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
   width: 100%;
   top: 170px;
-  z-index: 1;
+
 
   @media (max-width: $breakpointMedium) {
     top: 310px;
@@ -93,7 +114,7 @@
   }
 }
 
-.spacer {
+.spacer1 {
   width: 40%;
   flex-grow: 1 1 auto;
 }
@@ -159,4 +180,56 @@
   position: absolute;
   width: 100%;
   top: 160px;
+}
+
+.social-links{
+  position: absolute;
+  bottom: 40px;
+  z-index: 2;
+  display: flex;
+  margin-left: 0px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  height: 50vh;
+  img{
+    margin: 0 20px;
+  }
+}
+
+.blue-line{
+  min-width: 15vh;
+  position: relative;
+  margin: 16px;
+  margin-left: 0;
+  margin-right: 20px;
+  border-bottom: 4px solid #4B47FF;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; 
+}
+
+.scroll-down-arrow{
+  writing-mode: vertical-rl;
+  // transform: rotate(180deg);
+  width: auto;
+  margin: 10px;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+line-height: 120%;
+}
+
+.email{
+  margin-left: 20px;
+}
+
+.scroll-down{
+  margin-left: 20px;
+}
+
+
+.spacer2 {
+  width: 60%;
+  flex-grow: 1 1 auto;
 }
