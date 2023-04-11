@@ -37,89 +37,71 @@
 .curve-image-container {
   position: relative;
   display: flex;
-  justify-content: center;
   width: 100%;
   overflow: hidden;
-  height: 80vh;
-  // @media (min-width: ($breakpointExpanded + (350px))) {
-  //   height: 85vh;
-  // }
-  // @media (max-width: ($breakpointExpanded + (350px))) {
-  //   height: 75vh;
-  // }
-  // @media (max-width: $breakpointMedium) {
-  //   justify-content: center;
-  // }
+  height: 57vh;
+  @media (min-width: ($breakpointExpanded + (350px))) {
+    height: 85vh;
+  }
+  @media (max-width: ($breakpointExpanded + (350px))) {
+    height: 75vh;
+  }
+  @media (max-width: $breakpointMedium) {
+    justify-content: center;
+  }
 }
 
 .profile-image1 {
   z-index: 0;
-  display: flex;
   position: absolute;
-  // object-fit: contain;
+  display: flex;
+  object-fit: contain;
   height: 600px;
-  // left: 150px;
+  left: 150px;
   bottom: 0;
 
   @media (min-width: ($breakpointExpanded + (350px))) {
-    top: 20px;
-    left: 110px;
-    height: 500px;
+    left: 150px;
+    height: 100%;
+    bottom: 0;
   }
   @media (max-width: ($breakpointExpanded + (350px))) {
     display: flex;
-    // left: 150px;
+    left: 150px;
     top: 20px;
-    left: 80px;
-    height: 500px;
+    height: 100%;
   }
   @media (max-width: ($breakpointExpanded + (100px))) {
     height: 500px;
-    left: 80px;
-    bottom: 0;
-  }
-  @media (max-width: $breakpointExpanded) {
-    height: 500px;
-    left: 60px;
+    left: 30px;
     bottom: 0;
   }
   @media (max-width: $breakpointMedium) {
     position: relative;
-    top: 5px;;
-    left: unset;
-    height: 50vh;
+    top: 5px;
+    height: 400px;
     bottom: 40px;
   }
-  @media (max-width: $breakpointCompact) {
-    height: 50vh;
-    left: unset;
-    top: 20px;
-  }
+  // @media (max-width: $breakpointCompact) {
+  //   display: block;
+  //   top: 100px !important;
+  //   left: 10px;
+  // }
 }
 
 .vector {
   position: absolute;
   width: 100%;
   z-index: 1;
-  height: 85vh;
-  bottom: -260px;
-  
-  
-  @media (max-width: ($breakpointExpanded + (100px)) ){
-    height: 80vh;
-    bottom: -220px;
-  }
-  @media (max-width: $breakpointExpanded) {
-    height: 60vh;
-    bottom: -160px;
-  }
+  bottom: 0;
+  width: 100%;
+  top: 170px;
+
   @media (max-width: $breakpointMedium) {
-    height: 50vh;
-    bottom: -10px;
+    top: 160px;
   }
   @media (max-width: $breakpointCompact) {
-    height: 40vh;
-    bottom: 40px;
+    top: 10px;
   }
 }
 
