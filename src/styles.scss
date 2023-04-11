@@ -1,13 +1,23 @@
 @import "./styles/main";
 // @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-html{
-    width: 100%;
 
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
 body{
-    overflow: hidden;
+    // overflow: hidden;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: $darkblue;
     color:$white;
 }
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+

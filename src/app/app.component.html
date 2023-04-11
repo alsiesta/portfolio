@@ -1,5 +1,25 @@
 <router-outlet>
-  <app-header></app-header>
-  <app-mainpane></app-mainpane>
-  <app-footer></app-footer>
+  <app-header (naviClick)="sideNaviClick($event)"></app-header>
+
+  <mat-sidenav-container>
+    <mat-sidenav class="mysidenav" (opened)="log('Is opened')" (closed)="log('Is closed')" #sidenav mode="side"
+      [(opened)]="opened" position="end">
+      <div><a href="#" class="menu-item">About me</a></div>
+      <div><a href="#" class="menu-item">My skills</a></div>
+      <div><a href="#" class="menu-item">Portfolio</a></div>
+      <div><a href="#" class="menu-item">Contact</a></div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <!-- <img src="../assets/dla-logo-white.png" alt=""> -->
+
+      <!-- <button (click)="opened=!opened">Toggled Opened</button>
+      <button (click)="sidenav.open()">Open</button>
+      <button (click)="sidenav.close()">Close</button>
+      <button (click)="sidenav.toggle()">Toggle</button> -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <!-- <app-header2></app-header2> -->
+  <!-- <app-mainpane></app-mainpane> -->
+  <!-- <app-footer></app-footer> -->
 </router-outlet>

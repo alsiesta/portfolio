@@ -7,21 +7,27 @@
     <a href="#" class="menu-item">About me</a>
     <a href="#" class="menu-item">My skills</a>
     <a href="#" class="menu-item">Portfolio</a>
+    <!-- <button (click)="toggleMenu()">Toggle</button> -->
 
   </div>
 
-  <span class="burger" (click)="toggleMenu()"><img src="./assets/svg/burger.svg" alt=""></span>
+  <!-- <span class="burger" (click)="toggleMenu()"><img src="./assets/svg/burger.svg" alt=""></span> -->
+  <button (click)="toggleMenu()">Toggle</button>
+  <!-- <span class="burger" (click)="toggleMenu()">
+    <span class="material-icons">{{ isSideNaviOpen ? "close" : "menu" }}</span>
+  </span> -->
+    
 
-  <div class="menu-compact" [class.is-open]="isMenuOpen">
-    <a href="#" class="menu-item">About me</a>
+  <!-- <div class="menu-compact" [class.is-open]="isSideNaviOpen"> -->
+    <!-- <a href="#" class="menu-item">About me</a>
     <a href="#" class="menu-item">My skills</a>
     <a href="#" class="menu-item">Portfolio</a>
     <a href="#" class="menu-item">Contact</a>
-    
+     -->
 
     
 
-  </div>
+  <!-- </div> -->
 
 </nav>
 

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portfolio Alexander Schönfeld';
+  opened = false;
+
+  sideNaviClick($event: boolean) {
+    this.opened = $event;
+    this.opened = !this.opened;
+  }
+
+  log(state:any) {
+    console.log(state);
+  }
 }
