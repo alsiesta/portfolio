@@ -12,10 +12,11 @@
   </div>
 
   <!-- <span class="burger" (click)="toggleMenu()"><img src="./assets/svg/burger.svg" alt=""></span> -->
-  <button (click)="toggleMenu()">Toggle</button>
-  <!-- <span class="burger" (click)="toggleMenu()">
-    <span class="material-icons">{{ isSideNaviOpen ? "close" : "menu" }}</span>
-  </span> -->
+  <!-- <button (click)="toggleMenu()">Toggle</button> -->
+  <span class="burger" (click)="toggleMenu()">
+    <img src="{{isSideNaviOpen ? sideNavOpenIcon : sideNavClosedIcon }}" >
+    
+  </span>
     
 
   <!-- <div class="menu-compact" [class.is-open]="isSideNaviOpen"> -->

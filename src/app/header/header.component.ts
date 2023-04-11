@@ -7,7 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HeaderComponent {
   isSideNaviOpen = false;
-  // @Input() sidenav: any;
+sideNavOpenIcon = "./assets/svg/close.svg"
+  sideNavClosedIcon = "./assets/svg/burger.svg"
+  
+
   @Output() naviClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   toggleMenu(): void {
