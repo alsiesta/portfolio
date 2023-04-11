@@ -102,16 +102,16 @@
   width: 100%;
   z-index: 1;
   height: 85vh;
-  bottom: -260px;
+  bottom: -210px;
   
   
   @media (max-width: ($breakpointExpanded + (100px)) ){
     height: 80vh;
-    bottom: -220px;
+    bottom: -190px;
   }
   @media (max-width: $breakpointExpanded) {
     height: 60vh;
-    bottom: -160px;
+    bottom: -90px;
   }
   @media (max-width: $breakpointMedium) {
     height: 50vh;
