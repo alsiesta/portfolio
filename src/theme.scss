@@ -22,8 +22,9 @@ $my-theme-dark: mat.define-dark-theme(
       accent: $my-accent,
       warn: $my-warn,
     ),
-    typography: mat.define-typography-config(),
-    density: 0,
+    typography: mat.define-typography-config(
+      $font-family: 'Poppins',
+    ),
   )
 );
 

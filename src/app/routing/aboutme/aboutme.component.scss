@@ -4,21 +4,30 @@
   width: 100%;
 }
 
-mat-card{
+mat-card {
   width: 100%;
-  height: 20vh;
-  background-color: rgba(44, 255, 36, 0.356)!important;
-  box-shadow: none
+  // background-color: rgba(44, 255, 36, 0.356) !important;
+  box-shadow: none;
 }
+
 mat-card-content {
   z-index: 3;
-  width: 100%;
+  margin: 10px 30px !important;
+  img {
+    width: 50px;
+    margin-right: 25px;
+  }
 }
+
 .mat-mdc-card-content {
   padding: 0 0;
 }
 
-.shadow{
+.flex {
+  display: flex;
+}
+
+.shadow {
   z-index: -1;
   position: absolute;
   right: 0;
@@ -26,9 +35,4 @@ mat-card-content {
   display: flex;
   justify-content: flex-end;
   width: 300px;
-
-  // position: absolute;
-  // right: 0;
-  // top: -240px;
 }
-
