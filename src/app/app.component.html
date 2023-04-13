@@ -1,7 +1,7 @@
 <router-outlet>
   <app-header (naviClick)="sideNaviClick($event)"></app-header>
 
-  <mat-sidenav-container>
+  <mat-sidenav-container [hasBackdrop]="false">
     <mat-sidenav (opened)="log('Is opened')" (closed)="log('Is closed')" #sidenav mode="over" [(opened)]="opened"
       position="end">
 

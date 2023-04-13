@@ -12,6 +12,14 @@
   height: 70vh;
 }
 
+mat-card{
+  z-index: 3;
+  width: 100%;
+  background-color: rgba(67, 214, 38, 0.647)!important;
+  box-shadow: none;
+  padding:0;
+}
+
 .shadows {
   position: relative;
   display: flex;
@@ -242,6 +250,19 @@
 }
 
 .copy-container-parent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  top: 160px;
+  @media (max-width: $breakpointMedium) {
+    justify-content: center;
+    width: 100%;
+    top: 390px;
+  }
+}
+.copy-container-parent2 {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

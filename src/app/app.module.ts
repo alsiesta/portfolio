@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,6 +13,8 @@ import { GreetingsectionComponent } from './routing/greetingsection/greetingsect
 import { MainpaneComponent } from './mainpane/mainpane.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
+
 import { MatListModule } from '@angular/material/list';
 import { AboutmeComponent } from './routing/aboutme/aboutme.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,7 +23,7 @@ import { Header2Component } from './header2/header2.component';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent, AboutmeComponent, Header2Component, ],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule, LayoutModule, MatSidenavModule, MatListModule,BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule, MatCardModule, LayoutModule, MatSidenavModule, MatListModule,BrowserAnimationsModule, ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
