@@ -5,19 +5,24 @@
   position: relative;
   align-items: flex-start;
   justify-content: flex-start;
-  // overflow: hidden;
   // min-height: 80vh;
   flex-direction: column;
-  width: 100vw;
-  height: 70vh;
+  width: 100%;
+  height: 100vh;
 }
 
-mat-card{
+mat-card {
   z-index: 3;
   width: 100%;
-  background-color: rgba(67, 214, 38, 0.647)!important;
+  // background-color: rgba(67, 214, 38, 0.647)!important;
   box-shadow: none;
-  padding:0;
+}
+mat-card-content {
+  width: 100%;
+}
+
+.mat-mdc-card-content {
+  padding: 0 0;
 }
 
 .shadows {
@@ -141,13 +146,18 @@ mat-card{
   }
 }
 
-.spacer1 {
-  flex-grow: 1 1 auto;
-  width: 40%;
-  @media (max-width: $breakpointMedium) {
-    width: 0;
-  }
+.flex{
+  display: flex;
 }
+
+// .spacer1 {
+//   flex-grow: 1 1 auto;
+//   width: 40vw;
+//   background-color: #9747ff;
+//   @media (max-width: $breakpointMedium) {
+//     width: 0;
+//   }
+// }
 
 .copy-container-child {
   display: flex;
@@ -254,53 +264,55 @@ mat-card{
   justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
-  width: 100%;
+  width: 65%;
+  right: 0;
   top: 160px;
   @media (max-width: $breakpointMedium) {
-    justify-content: center;
-    width: 100%;
-    top: 390px;
-  }
-}
-.copy-container-parent2 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: absolute;
-  width: 100%;
-  top: 160px;
-  @media (max-width: $breakpointMedium) {
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 80%;
     top: 390px;
   }
 }
 
+
 .talk-button{
   position: absolute;
-  top: 200px;
-  left: 200px;
   z-index: 2;
+    display: flex;
+  width: 45%!important;
+  right: 0;
+  top: 340px;
+  
+  @media (max-width: $breakpointMedium) {
+    align-items: center;
+    width: 60%!important;
+    top: 500px;
+  }
 }
 
 .social-links {
   position: absolute;
-  bottom: 40px;
+  bottom: 140px;
   z-index: 2;
   display: flex;
   margin-left: 0px;
-  justify-content: flex-start;
-  align-items: flex-end;
   width: 100%;
-  height: 25vh;
+  justify-content: flex-start!important;
+  align-items: flex-start!important;
+  // height: 25vh;
   img {
     margin: 0 20px;
   }
+  @media (max-width: $breakpointMedium) {
+
+bottom: 40px;  }
 }
 
 .blue-line {
   min-width: 15vh;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   margin: 16px;
   margin-left: 0;
   margin-right: 20px;
@@ -309,23 +321,33 @@ mat-card{
   border-bottom-right-radius: 4px;
 }
 
+.social-icon{
+position: absolute;
+left: 150px;
+bottom: -2px;
+}
+
 .scroll-down-arrow {
   writing-mode: vertical-rl;
-  width: auto;
+  width: 100%;
   margin: 10px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
   line-height: 120%;
+  @media (max-width: $breakpointMedium) {
+    display: none;
+  }
 }
 
 .email {
-  margin-left: 20px;
-}
-
-.scroll-down {
-  margin-left: 20px;
+  margin-left: 400px;
+  position: absolute;
+  bottom: 5px;
+  @media (max-width: $breakpointMedium) {
+    display: none;
+  }
 }
 
 .spacer2 {

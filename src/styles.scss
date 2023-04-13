@@ -3,10 +3,11 @@
 html, body {
     height: 100%;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body{
-    // overflow: hidden;
+    overflow: hidden!important;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: $darkblue;
@@ -20,7 +21,6 @@ p {
   margin: 0;
 }
 
-
 mat-card{
   z-index: 2;
   width: 100%;
@@ -28,3 +28,23 @@ mat-card{
   border: 0px solid #000!important;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #4b47ff rgba(0, 190, 232);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #4b47ff;
+    border-radius: 5px;
+}
