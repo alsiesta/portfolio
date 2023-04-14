@@ -1,3 +1,5 @@
+@import "/src/styles/utils/variables";
+
 :host {
   display: block;
   z-index: 1;
@@ -6,11 +8,12 @@
 
 mat-card {
   width: 100%;
-  // background-color: rgba(44, 255, 36, 0.356) !important;
+  background-color: rgba(44, 255, 36, 0.356) !important;
   box-shadow: none;
 }
 
 mat-card-content {
+  background-color: rgba(44, 255, 36, 0.356) !important;
   z-index: 3;
   margin: 10px 30px !important;
   img {
@@ -38,13 +41,9 @@ mat-card-content {
 }
 
 .circle-image img {
-  width: 453px;
-  height: 453px;
+  width: 25vw;
+  height: 25vw;
   object-fit: cover;
   border: 4px solid #70E61C;
   border-radius: 100%;
-}
-
-.circle-image--after-line img {
-  margin-left: auto;
 }
