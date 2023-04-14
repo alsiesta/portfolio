@@ -36,3 +36,15 @@ mat-card-content {
   justify-content: flex-end;
   width: 300px;
 }
+
+.circle-image img {
+  width: 453px;
+  height: 453px;
+  object-fit: cover;
+  border: 4px solid #70E61C;
+  border-radius: 100%;
+}
+
+.circle-image--after-line img {
+  margin-left: auto;
+}
