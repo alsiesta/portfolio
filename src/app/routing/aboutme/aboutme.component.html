@@ -1,24 +1,26 @@
-<mat-card style="flex-direction: row;">
-  <mat-card-content>
+<mat-card fxLayout="row" >
+  <mat-card-content fxLayout="column" fxLayoutGap="20px">
 
-    <mat-card-content>
+    <span>
       <div class="headline">About me</div>
-    </mat-card-content>
-    <mat-card-content class="regular">
+    </span>
+    <span class="regular">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repudiandae sunt nemo
       a, ab quaerat veniam praesentium illo, vel, repellat beatae aperiam vero cum? Itaque facilis minima provident
       magni beatae? Quae velit quas reiciendis nobis voluptate placeat debitis veritatis non quos error a delectus
-      similique provident
-      voluptatum autem ab nesciunt quaerat aliquid fuga tenetur, perferendis numquam! Nobis cum eos quas.
-    </mat-card-content>
-    <mat-card-content class="flex">
+      similique provident voluptatum autem ab nesciunt quaerat aliquid fuga tenetur, perferendis numquam! Nobis cum eos
+      quas.
+    </span>
+
+    <span fxLayout="row" fxLayoutGap="25px">
       <div><img src="./assets/svg/bulb.svg"></div>
-      <div>Quae velit quas reiciendis nobis voluptate placeat debitis veritatis non quos error a delectus
-        similique provident voluptatum autem ab nesciunt quaerat aliquid fuga tenetur, perferendis numquam! Nobis cum
-        eos
+      <div>
+        Quae velit quas reiciendis nobis voluptate placeat debitis veritatis non quos error a delectus similique
+        provident voluptatum autem ab nesciunt quaerat aliquid fuga tenetur, perferendis numquam! Nobis cum eos
         quas.Quae velit quas reiciendis nobis.</div>
-    </mat-card-content>
-    <mat-card-content class="flex">
+    </span>
+
+    <span fxLayout="row" fxLayoutGap="25px">
       <div><img src="./assets/svg/puzzle.svg"></div>
       <div>
         Voluptate placeat debitis veritatis non quos error a delectus
@@ -27,15 +29,13 @@
         quas.
       </div>
 
-    </mat-card-content>
+    </span>
   </mat-card-content>
 
-  <mat-card-content>
-    <mat-card-content>
-      <div class="circle-image">
-        <img src="./assets/img/alex_profile2.jpg" alt="">
-      </div>
-    </mat-card-content>
+  <mat-card-content class="circle-image">
+        <div decor-line="9">
+          <img src="./assets/img/alex_profile2.jpg">
+        </div>      
   </mat-card-content>
 
 

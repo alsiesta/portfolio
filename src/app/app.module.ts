@@ -14,7 +14,7 @@ import { MainpaneComponent } from './mainpane/mainpane.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { AboutmeComponent } from './routing/aboutme/aboutme.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +23,7 @@ import { Header2Component } from './header2/header2.component';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent, AboutmeComponent, Header2Component, ],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule, MatCardModule, LayoutModule, MatSidenavModule, MatListModule,BrowserAnimationsModule, ],
+  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule, MatCardModule, LayoutModule, MatSidenavModule, MatListModule,BrowserAnimationsModule, FlexLayoutModule ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
