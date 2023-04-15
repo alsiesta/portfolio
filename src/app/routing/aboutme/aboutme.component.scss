@@ -1,22 +1,22 @@
 @import "/src/styles/utils/variables";
 
 :host {
-  display: block;
+  display: flex;
   z-index: 1;
   width: 100%;
 }
 
 mat-card {
-  background-color: rgba(44, 255, 36, 0.356) !important;
+  // background-color: rgba(44, 255, 36, 0.356) !important;
   box-shadow: none;
   padding-left: 30px;
 }
 
 mat-card-content {
-  background-color: rgba(44, 255, 36, 0.356) !important;
+  // background-color: rgba(44, 255, 36, 0.356) !important;
 
   span {
-    background-color: rgba(44, 255, 36, 0.356) !important;
+    // background-color: rgba(44, 255, 36, 0.356) !important;
     padding-right: 40px;
   }
 

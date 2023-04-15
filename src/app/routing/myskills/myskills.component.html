@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-content>
+        <div class="container" id="skills">
+            <div class="skills-icons">
+                <div *ngFor="let skill of skills; let i = index" class="skills-icons-row">
+                    <div class="skill-icon">
+                        <img src="./assets/svg/{{skill.img}}" alt="{{skill.name + ' Icon'}}">
+                        <span>{{skill.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+
+    <mat-card-content>
+        <div decor-line="9">
+            <div class="headline">My skills</div>
+        </div>
+    </mat-card-content>
+
+
+    <img class="shadow" src="./assets/img/about_purple_shadow.png" alt="">
+
+</mat-card>

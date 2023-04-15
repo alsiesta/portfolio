@@ -20,9 +20,10 @@ import { AboutmeComponent } from './routing/aboutme/aboutme.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Header2Component } from './header2/header2.component';
+import { MyskillsComponent } from './routing/myskills/myskills.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent, AboutmeComponent, Header2Component, ],
+  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent, AboutmeComponent, Header2Component, MyskillsComponent, ],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule, MatCardModule, LayoutModule, MatSidenavModule, MatListModule,BrowserAnimationsModule, FlexLayoutModule ],
   providers: [],
   bootstrap: [AppComponent],
