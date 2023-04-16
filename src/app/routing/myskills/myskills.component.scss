@@ -1,165 +1,98 @@
 @import "/src/styles/utils/variables";
 
 :host {
-  display: flex;
-  z-index: 1;
-  width: 100%;
-  background-color: rgba(44, 255, 36, 0.356) !important;
-}
-
-.boxes{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // width: 2em;
-  // height: 2em;
-  // margin: 5px;
-  // gap:5px;
-  background-color: rgba(44, 255, 36, 0.356) !important;
-}
-
-.box {
-  flex: 1;
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  display: flex;
-  cursor: pointer;
-  background-color: rgba(198, 80, 12, 0.456) !important;
-}
-
-
-.container1 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  background-color: rgba(44, 255, 36, 0.356) !important;
+  margin: 25vh 0;
   width: 100vw;
-  // padding-left: 30px;
-}
-
-mat-card {
-  display: flex;
-  background-color: rgba(44, 255, 36, 0.356) !important;
-  width: 100vw;
-  // padding-left: 30px;
-}
-
-mat-card-content {
-  background-color: rgba(44, 255, 36, 0.356) !important;
-  padding: 0!important;
-  // max-width: 100%;
-  display: flex;
 }
 
 .container {
-  background-color: rgba(44, 255, 36, 0.356) !important;
   display: flex;
-  flex: 1;
-  justify-content: space-between;
-  position: relative;
+  flex-direction: row;
 
-  .skills-icons {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    // flex-wrap: wrap;
-    box-sizing: border-box;
-    justify-content: center;
+  @media (max-width: $breakpointMedium) {
+    flex-direction: column-reverse;
   }
-
-  .skills-icons-row {
-    display: flex;
-    justify-content: space-around;
-
-    // @media (max-width: 1000px) {
-    //   flex-direction: column;
-    // }
-  }
-
-  .skill-icon {
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 131, 36, 0.356) !important;
-
-    img {
-      width: 8vw;
-      height: 8vh;
-      object-fit: contain;
-      margin: 16px;
-
-      &:hover {
-        cursor: pointer;
-        filter: brightness(0.9);
-      }
-    }
-
-    z-index: 3;
-    // margin: 10px 30px !important;
-
-    img {
-      width: 50px;
-      height: 50px;
-      // max-height: 50px;
-    }
-  }
-
-  .mat-mdc-card-content {
-    padding: 0 0;
-  }
-
-  .flex {
-    display: flex;
-  }
-
-  .shadow {
-    z-index: -1;
-    position: relative;
-    right: 0;
-    top: -300px;
-    width: 200px;
-  }
-
-  [decor-line] {
-    position: relative;
-    align-items: center;
-    display: flex;
-    @media (max-width: $breakpointMedium) {
-      display: none;
-    }
-  }
-  [decor-line]::after {
-    content: attr(decor-line);
-    z-index: 20;
-    margin-right: 0;
-    height: 4px;
-    min-width: 15vh;
-    border-bottom: 4px solid $green;
-    color: transparent;
-  }
-
-  .headline {
-    margin-left: 100px;
-  }
+}
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 
   .icon {
+    flex-grow: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    background-color: rgba(44, 255, 36, 0.356) !important;
-    text-align: center;
+    min-width: 120px;
+    max-width: 120px;
+    min-height: 120px;
+    max-height: 120px;
     img {
-      margin-bottom: 15px;
+      max-width: 50px;
+      max-height: 50px;
+    }
+    span {
+      margin-top: 10px;
     }
   }
+}
+.headline-box {
+    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  .headline {
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 50px;
+    
+    :nth-child(2){
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+    span{
+        white-space: nowrap;
+    }
+    
+    @media (max-width: $breakpointMedium) {
+        width: 60%;
+      }
+
+  }
+}
+[decor-line] {
+  position: relative;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+[decor-line]::after {
+  content: attr(decor-line);
+  z-index: 20;
+  position: relative;
+  right: 0;
+    margin-left: 10px;
+  height: 4px;
+  min-width: 100%;
+  border-bottom: 4px solid $green;
+  color: transparent;
+}
+[decor-line]::before {
+  content: attr(decor-line);
+  z-index: 20;
+  margin-right: 10px;
+  margin-left: 0px;
+  height: 4px;
+  min-width: 5vh;
+  border-bottom: 4px solid $green;
+  color: transparent;
 }

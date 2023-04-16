@@ -1,32 +1,19 @@
-<mat-card>
-    <mat-card-content>
-    </mat-card-content>
-</mat-card>
+<div class="container">
+    <div class="icon-list">
+        <div *ngFor="let skill of skills; let i = index" class="icon">
+            <img src="./assets/svg/{{skill.img}}" alt="{{skill.name + ' Icon'}}">
+            <span>{{skill.name}}</span>
+        </div>
+    </div>
 
-<div *ngFor="let box of arr; let i = index" class="boxes">
-<div class="box">{{box}}</div>
-</div>
-
-<!-- <mat-card>
-<div class="container1">
-    <mat-card-content>
-        <div class="container" id="skills">
-            <div class="skills-icons">
-                <div *ngFor="let skill of skills; let i = index" class="skills-icons-row">
-                    <div class="skill-icon">
-                        <img src="./assets/svg/{{skill.img}}" alt="{{skill.name + ' Icon'}}">
-                        <span>{{skill.name}}</span>
-                    </div>
-                </div>
+    <div class="headline-box">
+        <div class="headline">
+            <div decor-line="">
+                <span>My Skills</span></div>
+            <div class="regular mt2">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt repellat, necessitatibus iusto quis earum est adipisci assumenda architecto? Maxime incidunt maiores odio nemo deleniti eos architecto omnis suscipit facilis.
             </div>
         </div>
-
-    </mat-card-content>
-    <div decor-line="9">
-    <div class="headline">My skills</div>
-</div>
+    </div>
 
 </div>
-</mat-card>    
-
-<img class="shadow" src="./assets/img/about_purple_shadow.png" alt=""> -->
