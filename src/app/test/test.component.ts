@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-myskills',
-  templateUrl: './myskills.component.html',
-  styleUrls: ['./myskills.component.scss']
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.scss']
 })
-export class MyskillsComponent {
-
-  arr: any = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+export class TestComponent {
 
   skills: any = [
     {
@@ -60,4 +58,5 @@ export class MyskillsComponent {
     },
     
   ]
+  
 }
