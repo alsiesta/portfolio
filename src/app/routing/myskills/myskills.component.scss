@@ -1,8 +1,7 @@
 @import "/src/styles/utils/variables";
 
 :host {
-  margin: 25vh 0;
-  width: 100vw;
+  margin: 5vh 0;
 }
 
 .container {
@@ -39,7 +38,7 @@
   }
 }
 .headline-box {
-    position: relative;
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -59,6 +58,10 @@
         margin-right: 30px;
         margin-top: 30px;
     }
+
+    .regular {
+      text-align: left;
+    }
     span{
         white-space: nowrap;
     }
@@ -73,6 +76,7 @@
   position: relative;
   align-items: center;
   display: flex;
+overflow: hidden;
   width: 100%;
 }
 [decor-line]::after {
