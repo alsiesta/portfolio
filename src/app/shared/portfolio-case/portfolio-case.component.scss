@@ -2,34 +2,54 @@
 @import "/src/styles/utils/buttons";
 
 :host {
-  display: flex;
-  justify-content: center;
   z-index: 2;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.example-card {
-    max-width: 400px;
-  }
+// .example-card {
+//   width: 100%;
+//   max-width: 50%;
   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+//   @media (max-width: $breakpointMedium) {
+      
+//       max-width: 400px;
+//       background-color: rgba(172, 255, 47, 0.344)!important;
+//       // display: flex;
+//       // flex-direction: column;
+//       // align-items: center;
+//   }
+//   justify-content: center;
+// }
+
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.copy-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
   }
+}
 
-.copy-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.spacer{
+    width: 30px;
+margin-top: 50px;
+}
 
-    p{
+.description{
+    
+    text-align: left;
+    @media (max-width: $breakpointMedium) {
         text-align: center;
+
     }
 }
-
-.h5{
-    height: 300px;
-    background-color: rgba(172, 255, 47, 0.344);
-}
-
