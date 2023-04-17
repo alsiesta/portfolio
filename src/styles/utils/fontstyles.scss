@@ -1,3 +1,6 @@
+@import "/src/styles/utils/variables";
+
+//used
 .headline{
     font-weight: 700;
     font-size: clamp(28px, 4.3vw, 65px);
@@ -5,22 +8,29 @@
     line-height: 120%;
 }
 
+//used
 .regular {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
 }
 
+//used
 .title-normal-bold {
     font-weight: 700;
     font-size: 32px;
     line-height: 120%;
+    color:$purple ;
+    margin: 10px 0px;
 }
 
+//used
 .subtitle-normal-regular {
     font-weight: 400;
     font-size: 23px;
     line-height: 120%;
+    color:$green;
+    margin: 10px 0px;
 }
 
 .text-small-reqular {
@@ -37,12 +47,20 @@
 
 .text-left {
     text-align: left;
+    margin: 10px 0px;
 }
 
-.text-middle {
+//used
+.text-center {
     text-align: center;
+    margin: 10px 0px;
 }
 
 .text-right {
     text-align: right;
+    margin: 10px 0px;
+}
+
+.spacer{
+    height: 30px;
 }
