@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-
+  public fxDirectionRow: string = 'row';
+  public fxDirectionRowRev: string = 'row-reverse';
   public portfolioCases = [
     {
       id: 0,

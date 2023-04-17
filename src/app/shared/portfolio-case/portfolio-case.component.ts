@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PortfolioCaseComponent {
   @Input() case: any;
+  @Input() fxDirection: string = '';
 }
