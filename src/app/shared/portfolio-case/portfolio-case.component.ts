@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio-case',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio-case.component.scss']
 })
 export class PortfolioCaseComponent {
-
+  @Input() case: any;
 }

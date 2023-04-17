@@ -24,9 +24,10 @@ import { MyskillsComponent } from './routing/myskills/myskills.component';
 import { TestComponent } from './test/test.component';
 import { PortfolioHeadlineComponent } from './routing/portfolio-headline/portfolio-headline.component';
 import { PortfolioCaseComponent } from './shared/portfolio-case/portfolio-case.component';
+import { PortfolioComponent } from './routing/portfolio/portfolio.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent, AboutmeComponent, Header2Component, MyskillsComponent, TestComponent, PortfolioHeadlineComponent, PortfolioCaseComponent, ],
+  declarations: [AppComponent, FooterComponent, HeaderComponent,GreetingsectionComponent, MainpaneComponent, AboutmeComponent, Header2Component, MyskillsComponent, TestComponent, PortfolioHeadlineComponent, PortfolioCaseComponent, PortfolioComponent, ],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatButtonModule,MatMenuModule, MatCardModule, LayoutModule, MatSidenavModule, MatListModule,BrowserAnimationsModule, FlexLayoutModule ],
   providers: [],
   bootstrap: [AppComponent],
