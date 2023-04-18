@@ -15,7 +15,7 @@
 mat-card {
   z-index: 3;
   width: 100%;
-  // background-color: rgba(67, 214, 38, 0.647)!important;
+  background-color: rgba(67, 214, 38, 0.647)!important;
   box-shadow: none;
 }
 mat-card-content {
@@ -275,22 +275,6 @@ mat-card-content {
   }
 }
 
-
-.talk-button{
-  position: absolute;
-  z-index: 2;
-    display: flex;
-  width: 45%!important;
-  right: 0;
-  top: 340px;
-  
-  @media (max-width: $breakpointMedium) {
-    align-items: center;
-    width: 60%!important;
-    top: 500px;
-  }
-}
-
 .social-links {
   position: absolute;
   bottom: 140px;
@@ -323,9 +307,9 @@ bottom: 40px;  }
 }
 
 .social-icon{
-position: absolute;
-left: 150px;
-bottom: -2px;
+  position: absolute;
+  left: 150px;
+  bottom: -2px;
 }
 
 .scroll-down-arrow {
@@ -360,10 +344,10 @@ bottom: -2px;
   position: relative;
   z-index: 5;
   margin-top: 20px;
-
-
+  
+  
   @media(max-width: 1000px) {
-      margin-top: 8px;
+    margin-top: 8px;
   }
 
   a {
@@ -376,17 +360,33 @@ bottom: -2px;
       transition: all 225ms ease-in-out;
       text-decoration: none;
       display: inline-block;
-
-
+      
+      
       &:hover {
-          cursor: pointer;
-          background-color: #9747FF;
-          transform: scale(1.1, 1.1);
+        cursor: pointer;
+        background-color: #9747FF;
+        transform: scale(1.1, 1.1);
       }
-
+      
       @media(max-width: 1000px) {
           font-size: calc(16px + 0.4vw);
           padding: 8px;
+        }
       }
-  }
-}
+    }
+    
+    
+    .contact-btn-box{
+      position: absolute;
+      z-index: 2;
+        display: flex;
+      width: 45%!important;
+      right: 0;
+      top: 340px;
+      
+      @media (max-width: $breakpointMedium) {
+        align-items: center;
+        width: 60%!important;
+        top: 500px;
+      }
+    }

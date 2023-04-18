@@ -40,9 +40,12 @@
 .headline-box {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
-
+  @media (max-width: $breakpointMedium) {
+    align-items: flex-end;
+  }
   .headline {
     position: relative;
     right: 0;
@@ -53,30 +56,27 @@
     text-align: justify;
     width: 100%;
     margin-bottom: 50px;
-    
-    :nth-child(2){
-        margin-right: 30px;
-        margin-top: 30px;
+    :nth-child(2) {
+      margin-right: 30px;
+      margin-top: 30px;
     }
-
     .regular {
       text-align: left;
     }
-    span{
-        white-space: nowrap;
+    span {
+      white-space: nowrap;
     }
-    
     @media (max-width: $breakpointMedium) {
-        width: 60%;
-      }
-
+      width: 60%;
+    }
   }
 }
+
 [decor-line] {
   position: relative;
   align-items: center;
   display: flex;
-overflow: hidden;
+  overflow: hidden;
   width: 100%;
 }
 [decor-line]::after {
@@ -84,7 +84,7 @@ overflow: hidden;
   z-index: 20;
   position: relative;
   right: 0;
-    margin-left: 10px;
+  margin-left: 10px;
   height: 4px;
   min-width: 100%;
   border-bottom: 4px solid $green;
@@ -99,4 +99,59 @@ overflow: hidden;
   min-width: 5vh;
   border-bottom: 4px solid $green;
   color: transparent;
+}
+
+mat-card {
+  z-index: 3;
+  width: 100%;
+  box-shadow: none;
+}
+mat-card-content {
+  width: 100%;
+}
+
+.contact-btn-box-largescreen {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  @media (max-width: $breakpointMedium) {
+    display: none;
+  }
+}
+
+.contact-btn-box-smallscreen {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  @media (max-width: $breakpointMedium) {
+    display: flex;
+  }
+}
+
+.contact-btn {
+  display: flex;
+  z-index: 2;
+
+  a {
+    font-size: calc(23px + 0.4vw);
+    background-color: #70e61c;
+    padding: 16px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 225ms ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #9747ff;
+      transform: scale(1.1, 1.1);
+    }
+
+    @media (max-width: 1000px) {
+      font-size: calc(16px + 0.4vw);
+      padding: 8px;
+    }
+  }
 }
