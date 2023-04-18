@@ -28,4 +28,12 @@ $my-theme-dark: mat.define-dark-theme(
   )
 );
 
+mat-card-content{
+  padding:0!important;
+  // @media (max-width: $breakpointMedium) {
+  // }
+}
+
 @include mat.all-component-themes($my-theme-dark);
+
+

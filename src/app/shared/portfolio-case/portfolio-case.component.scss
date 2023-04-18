@@ -10,7 +10,7 @@
 
 mat-card{
     img{
-        width: clamp(350px, 40vw, 600px);
+        width: clamp(220px, 40vw, 600px);
     }
 }
 .example-header-image {
@@ -35,7 +35,7 @@ margin-top: 50px;
 }
 
 .description{
-    width: clamp(300px, 40vw, 600px);
+    width: clamp(250px, 40vw, 600px);
     text-align: left;
     @media (max-width: $breakpointMedium) {
         text-align: center;

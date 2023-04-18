@@ -15,7 +15,7 @@
 mat-card {
   z-index: 3;
   width: 100%;
-  background-color: rgba(67, 214, 38, 0.647)!important;
+  // background-color: rgba(67, 214, 38, 0.647)!important;
   box-shadow: none;
 }
 mat-card-content {
@@ -271,7 +271,7 @@ mat-card-content {
   @media (max-width: $breakpointMedium) {
     align-items: center;
     width: 80%;
-    top: 390px;
+    top: 434px;
   }
 }
 
@@ -387,6 +387,6 @@ bottom: 40px;  }
       @media (max-width: $breakpointMedium) {
         align-items: center;
         width: 60%!important;
-        top: 500px;
+        top: 556px;
       }
     }

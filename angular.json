@@ -30,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/theme.scss",
+              "src/material.scss",
               "src/styles.scss",
               "src/assets/fonts.css"
             ],
@@ -95,7 +95,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/theme.scss",
+              "src/material.scss",
               "src/styles.scss",
               "src/assets/fonts.css"
             ],
