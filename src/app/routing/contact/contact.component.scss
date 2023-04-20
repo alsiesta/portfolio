@@ -17,7 +17,7 @@
 .form-field-grid{
     display: grid;
     gap: 1.5rem;
-    grid-auto-columns: 1fr;
+    grid-auto-columns: 1fr; // wichtig, damit jede col per default 1 fraction an Breite erhält. Ansonsten wird area two trotzdem zusammen gequetscht von area one!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     grid-template-areas: 
     'one one two two two';
     :nth-child(1){
