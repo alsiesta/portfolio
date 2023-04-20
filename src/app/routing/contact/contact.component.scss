@@ -1,0 +1,32 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+@import "/src/styles/utils/variables";
+@include textfield.core-styles;
+
+:host {
+  width: 100%;
+}
+
+.subtitle-normal-bold {
+    color:$white ;
+}
+
+.form-grid{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    'one'
+    'two';
+}
+
+mat-card{
+    padding: 10px 30px;
+    background-color: rgba(0, 128, 0, 0.4)!important;
+}
+
+mat-card-content{
+    background-color: rgba(18, 225, 18, 0.4)!important;
+}
