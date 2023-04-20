@@ -6,21 +6,34 @@
 @import "/src/styles/utils/variables";
 @include textfield.core-styles;
 
-:host {
-  width: 100%;
-}
+// :host {
+//   width: 100%;
+// }
 
 .subtitle-normal-bold {
     color:$white ;
 }
 
-.form-grid{
+.form-field-grid{
     display: grid;
     gap: 1.5rem;
+    grid-auto-columns: 1fr;
     grid-template-areas: 
-    'one'
-    'two';
+    'one one two two two';
+    :nth-child(1){
+        grid-area: one;
+    }
+    :nth-child(2){
+        grid-area: two;
+    }
+
+    @media (max-width: $breakpointMedium) {
+        grid-template-areas:
+            'one'
+            'two';
+      }
 }
+
 
 mat-card{
     padding: 10px 30px;
