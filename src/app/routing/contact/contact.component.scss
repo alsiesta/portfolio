@@ -11,35 +11,47 @@
 // }
 
 .subtitle-normal-bold {
-    color:$white ;
+  color: $white;
 }
 
-.form-field-grid{
-    display: grid;
-    gap: 1.5rem;
-    grid-auto-columns: 1fr; // wichtig, damit jede col per default 1 fraction an Breite erhält. Ansonsten wird area two trotzdem zusammen gequetscht von area one!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    grid-template-areas: 
-    'one one two two two';
-    :nth-child(1){
-        grid-area: one;
-    }
-    :nth-child(2){
-        grid-area: two;
-    }
-
-    @media (max-width: $breakpointMedium) {
-        grid-template-areas:
-            'one'
-            'two';
-      }
+.namefield {
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: red;
+  }
 }
 
-
-mat-card{
-    padding: 10px 30px;
-    background-color: rgba(0, 128, 0, 0.4)!important;
+.mdc-text-field .mdc-text-field__input :focus{
+    caret-color: red !important;
 }
 
-mat-card-content{
-    background-color: rgba(18, 225, 18, 0.4)!important;
+.form-field-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr; 
+  grid-template-areas: "one one two two two";
+  :nth-child(1) {
+    grid-area: one;
+  }
+  :nth-child(2) {
+    grid-area: two;
+  }
+
+  @media (max-width: $breakpointMedium) {
+    grid-template-areas:
+      "one"
+      "two";
+  }
+}
+
+// mat-form-field-underline {
+//     background-color: rgb(255, 0, 0) !important;
+//   }
+
+mat-card {
+  padding: 10px 30px;
+  background-color: rgba(0, 128, 0, 0.4) !important;
+}
+
+mat-card-content {
+  background-color: rgba(18, 225, 18, 0.4) !important;
 }

@@ -21,6 +21,11 @@ p {
   margin: 0;
 }
 
+
+.mdc-text-field .mdc-text-field__input :focus{
+  caret-color: red !important;
+}
+
 mat-card{
   z-index: 2;
   width: 100%;
