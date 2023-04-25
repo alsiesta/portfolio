@@ -3,31 +3,20 @@
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
 
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 @import "/src/styles/utils/variables";
 @include textfield.core-styles;
 
-// :host {
-//   width: 100%;
-// }
 
 .subtitle-normal-bold {
   color: $white;
 }
 
-.namefield {
-  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: red;
-  }
-}
-
-.mdc-text-field .mdc-text-field__input :focus{
-    caret-color: red !important;
-}
-
 .form-field-grid {
   display: grid;
   gap: 1.5rem;
-  grid-auto-columns: 1fr; 
+  grid-auto-columns: 1fr;
   grid-template-areas: "one one two two two";
   :nth-child(1) {
     grid-area: one;
@@ -49,9 +38,11 @@
 
 mat-card {
   padding: 10px 30px;
-  background-color: rgba(0, 128, 0, 0.4) !important;
+    // background-color: rgba(0, 128, 0, 0.4) !important;
 }
 
 mat-card-content {
-  background-color: rgba(18, 225, 18, 0.4) !important;
+    // background-color: rgba(18, 225, 18, 0.4) !important;
 }
+
+

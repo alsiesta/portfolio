@@ -1,8 +1,12 @@
 @use "@angular/material" as mat;
 
 $my-primary: mat.define-palette(mat.$portfolio-palette1, 500);
-$my-accent: mat.define-palette(mat.$portfolio-palette2, 500, A100, A400);
+$my-accent: mat.define-palette(mat.$portfolio-palette3, 500, A100, A400);
 $my-warn: mat.define-palette(mat.$red-palette);
+
+$my-form-primary: mat.define-palette(mat.$red-palette);
+$my-form-accent: mat.define-palette(mat.$red-palette);
+$my-form-warn: mat.define-palette(mat.$red-palette);
 
 $my-theme: mat.define-light-theme(
   (
@@ -15,6 +19,7 @@ $my-theme: mat.define-light-theme(
     density: 0,
   )
 );
+
 $my-theme-dark: mat.define-dark-theme(
   (
     color: (
@@ -22,18 +27,40 @@ $my-theme-dark: mat.define-dark-theme(
       accent: $my-accent,
       warn: $my-warn,
     ),
-    typography: mat.define-typography-config(
-      $font-family: 'Poppins',
-    ),
+    typography:
+      mat.define-typography-config(
+        $font-family: "Poppins",
+      ),
   )
 );
 
-mat-card-content{
-  padding:0!important;
-  // @media (max-width: $breakpointMedium) {
-  // }
-}
+$my-form-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-form-primary,
+      accent: $my-form-accent,
+      warn: $my-form-warn,
+    ),
+    typography:
+      mat.define-typography-config(
+        $font-family: "Poppins",
+      ),
+  )
+);
 
+//diese theme funktioniert
 @include mat.all-component-themes($my-theme-dark);
 
 
+// @include mat.core-theme($my-theme-dark);
+// @include mat.form-field-theme($my-theme-dark);
+
+// @include mat.angular-material-theme($my-theme-dark);
+
+
+
+//test themes, funktionieren nicht!!!
+// $alternate-theme: mat-light-theme($mat-deep-purple, $mat-amber, $mat-red);
+
+// @include mat-form-field-theme($my-form-theme); // Form-Field theme
+// @include mat-input-theme($my-form-theme);      // Input Theme
