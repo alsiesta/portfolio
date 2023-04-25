@@ -11,30 +11,35 @@
         </div>
     </mat-card-content>
 
-
     <mat-card-content>
         <form #contactForm="ngForm" action="" method="post" fxLayout="column">
 
 
             <mat-form-field appearance="outline">
                 <mat-label>Your name</mat-label>
-                <input [(ngModel)]="userModel.username"  #name="ngModel" name="username" type="text" required  matInput placeholder="..." >
-                <mat-icon matSuffix>task_alt</mat-icon>
-                <mat-hint>{{ name.untouched }}</mat-hint>
+                <input [(ngModel)]="userModel.username"  #name="ngModel" name="username" type="text" required minlength="3"  matInput placeholder="..." >
+               
+                <mat-icon *ngIf="name.valid" matSuffix color="primary">task_alt</mat-icon>
+                <mat-icon *ngIf="name.invalid && (name.dirty || name.touched )" matSuffix color="warn">error</mat-icon>
+                <mat-hint *ngIf="name.invalid  && (name.dirty || name.touched )" style="color:red">Name has to have 3 characters minimum</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
                 <mat-label>Your email</mat-label>
                 <input [(ngModel)]="userModel.email" #email="ngModel" name="email" ngModel type="text" required  matInput placeholder="..." >
-                <mat-icon matSuffix>task_alt</mat-icon>
-                <!-- <mat-hint>Hint</mat-hint> -->
+              
+                <mat-icon *ngIf="email.valid" matSuffix color="primary">task_alt</mat-icon>
+                <mat-icon *ngIf="email.invalid && (email.dirty || email.touched )" matSuffix color="warn">error</mat-icon>
+                <mat-hint *ngIf="email.invalid  && (email.dirty || email.touched )" style="color:red">Your email is incomplete</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
                 <mat-label>Your message</mat-label>
-                <textarea [(ngModel)]="userModel.message" #message="ngModel" name="message" ngModel type="text" required matInput placeholder="..." rows="5" ></textarea>
-                <mat-icon matSuffix>error</mat-icon>
-                <!-- <mat-hint>Hint</mat-hint> -->
+                <textarea [(ngModel)]="userModel.message" #message="ngModel" name="message" ngModel type="text" required minlength="5"  matInput placeholder="..." rows="5" ></textarea>
+              
+                <mat-icon *ngIf="message.valid" matSuffix color="primary">task_alt</mat-icon>
+                <mat-icon *ngIf="message.invalid && (message.dirty || message.touched )" matSuffix color="warn">error</mat-icon>
+                <mat-hint *ngIf="message.invalid  && (message.dirty || message.touched )" style="color:red">Your message should include 5 characters minimum</mat-hint>
             </mat-form-field>
 
             <button mat-raised-button color="primary">Senden</button>
