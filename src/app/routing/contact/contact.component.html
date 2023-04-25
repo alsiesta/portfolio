@@ -14,7 +14,6 @@
     <mat-card-content>
         <form #contactForm="ngForm" action="" method="post" fxLayout="column">
 
-
             <mat-form-field appearance="outline">
                 <mat-label>Your name</mat-label>
                 <input [(ngModel)]="userModel.username"  #name="ngModel" name="username" type="text" required minlength="3"  matInput placeholder="..." >
@@ -28,9 +27,9 @@
                 <mat-label>Your email</mat-label>
                 <input [(ngModel)]="userModel.email" #email="ngModel" name="email" ngModel type="text" required  matInput placeholder="..." >
               
-                <mat-icon *ngIf="email.valid" matSuffix color="primary">task_alt</mat-icon>
-                <mat-icon *ngIf="email.invalid && (email.dirty || email.touched )" matSuffix color="warn">error</mat-icon>
-                <mat-hint *ngIf="email.invalid  && (email.dirty || email.touched )" style="color:red">Your email is incomplete</mat-hint>
+                <mat-icon *ngIf="validateEmail()" matSuffix color="primary">task_alt</mat-icon>
+                <mat-icon *ngIf="!validateEmail() && (email.dirty || email.touched )" matSuffix color="warn">error</mat-icon>
+                <mat-hint *ngIf="!validateEmail()  && (email.dirty || email.touched )" style="color:red">Sorry, your email is not valid</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -40,9 +39,10 @@
                 <mat-icon *ngIf="message.valid" matSuffix color="primary">task_alt</mat-icon>
                 <mat-icon *ngIf="message.invalid && (message.dirty || message.touched )" matSuffix color="warn">error</mat-icon>
                 <mat-hint *ngIf="message.invalid  && (message.dirty || message.touched )" style="color:red">Your message should include 5 characters minimum</mat-hint>
+                
             </mat-form-field>
-
-            <button mat-raised-button color="primary">Senden</button>
+<small class="required-field">* required input</small>
+            <button [disabled]="contactForm.form.invalid" mat-raised-button color="primary">Senden</button>
         </form>
     </mat-card-content>
 
