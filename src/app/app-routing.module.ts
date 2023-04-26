@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ImprintComponent } from './routing/imprint/imprint.component';
 
 const routes: Routes = [
-  // {path: '', component: Main},
+
+  {path: 'imprint', component: ImprintComponent},
 ];
 
 @NgModule({

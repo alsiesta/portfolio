@@ -22,6 +22,7 @@ import { PortfolioCaseComponent } from './shared/portfolio-case/portfolio-case.c
 import { PortfolioComponent } from './routing/portfolio/portfolio.component';
 import { ContactComponent } from './routing/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { ImprintComponent } from './routing/imprint/imprint.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     PortfolioCaseComponent,
     PortfolioComponent,
     ContactComponent,
+    ImprintComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,9 +8,6 @@
 @import "/src/styles/utils/variables";
 @include textfield.core-styles;
 
-
-
-
 .subtitle-normal-bold {
   color: $white;
 }
@@ -41,18 +38,9 @@
 
 }
 
-
-// mat-form-field-underline {
-//     background-color: rgb(255, 0, 0) !important;
-//   }
-
 mat-card {
   padding: 10px 30px;
-    // background-color: rgba(0, 128, 0, 0.4) !important;
 }
 
-mat-card-content {
-    // background-color: rgba(18, 225, 18, 0.4) !important;
-}
 
 

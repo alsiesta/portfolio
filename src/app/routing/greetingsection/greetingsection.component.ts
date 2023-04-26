@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./greetingsection.component.scss'],
 })
 export class GreetingsectionComponent {
-
+  toContact() {
+    document.getElementById('contact')?.scrollIntoView({behavior:'smooth'});
+  }
 }

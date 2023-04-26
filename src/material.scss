@@ -1,4 +1,8 @@
 @use "@angular/material" as mat;
+@import "./styles/main";
+
+
+// CUSTOM THEME SETUP ///////////////////////////////////////////////
 
 $my-primary: mat.define-palette(mat.$portfolio-palette1, 500);
 $my-accent: mat.define-palette(mat.$portfolio-palette3, 500, A100, A400);
@@ -48,19 +52,52 @@ $my-form-theme: mat.define-dark-theme(
   )
 );
 
-//diese theme funktioniert
+//dieses theme funktioniert
 @include mat.all-component-themes($my-theme-dark);
 
 
 // @include mat.core-theme($my-theme-dark);
 // @include mat.form-field-theme($my-theme-dark);
-
 // @include mat.angular-material-theme($my-theme-dark);
-
-
 
 //test themes, funktionieren nicht!!!
 // $alternate-theme: mat-light-theme($mat-deep-purple, $mat-amber, $mat-red);
 
 // @include mat-form-field-theme($my-form-theme); // Form-Field theme
 // @include mat-input-theme($my-form-theme);      // Input Theme
+
+
+// MATERIAL CLASS CUSTOMIZATION ///////////////////////////////////////////////
+.mat-mdc-text-field-wrapper {
+  margin-top: 1rem;
+}
+
+//overwriting Material styling for text-field notched-outline behavior
+//outline
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color: $purple !important;
+}
+
+
+ //hover
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):hover .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover .mdc-notched-outline__trailing{
+    border-color: $green!important;
+ }
+
+ //focus
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing{
+  border-color: $green !important;
+ }
+
+ //invalid
+ .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__notch, .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing{
+  border-color: red !important;
+ }
+ 
+
+mat-card{
+  z-index: 2;
+  width: 100%;
+  background-color: transparent!important;
+  // border: 0px solid transparent!important;
+}

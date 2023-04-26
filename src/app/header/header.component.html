@@ -1,12 +1,12 @@
 <nav>
-  <a href="#"><img class="logotype" src="./assets/img/dla-logo-white.png" alt=""></a>
+  <a (click)="toHome()" routerLink="" routerLinkActive="active" ><img class="logotype" src="./assets/img/dla-logo-white.png" alt=""></a>
 
   <div class="menu-expanded">
     <span class="spacer"></span>
 
-    <a href="#" class="menu-item">About me</a>
-    <a href="#" class="menu-item">My skills</a>
-    <a href="#" class="menu-item">Portfolio</a>
+    <a (click)="toAbout()" routerLink="" routerLinkActive="active" class="menu-item">About me</a>
+    <a (click)="toSkills()" routerLink="" routerLinkActive="active"  class="menu-item">My skills</a>
+    <a (click)="toPortfolio()" routerLink="" routerLinkActive="active"  class="menu-item">Portfolio</a>
 
   </div>
 
