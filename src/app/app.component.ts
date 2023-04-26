@@ -14,6 +14,8 @@ export class AppComponent {
     this.opened = !this.opened;
   }
 
+  isSideNaviOpen= false;
+
   log(state:any) {
     console.log(state);
   }

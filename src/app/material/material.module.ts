@@ -10,7 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
 
-const MaterialComponents = [
+const MaterialComponents = [    
   MatToolbarModule,
   MatFormFieldModule,
   MatIconModule,
