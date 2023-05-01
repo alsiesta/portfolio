@@ -1,22 +1,25 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-  // isSideNaviOpen = false;
+export class HeaderComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    console.log('sidenaviopen: ',this.isSideNaviOpen);
+  }
   sideNavOpenIcon = "./assets/svg/close.svg"
   sideNavClosedIcon = "./assets/svg/burger.svg"
   
+  
 
   @Output() naviClick: EventEmitter<boolean> = new EventEmitter<boolean>();
-  // @Output() isSideNaviOpen = false;
   @Input() isSideNaviOpen: boolean | undefined;
 
 
-  toggleMenu(): void {
+  toggleMenu() {
+    console.log('toggle was clicked Header and SideNaviOpen status is: ',this.isSideNaviOpen);    
     this.naviClick.emit(this.isSideNaviOpen);
     this.isSideNaviOpen = !this.isSideNaviOpen
   }

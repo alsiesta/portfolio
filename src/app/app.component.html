@@ -1,4 +1,4 @@
-<app-header (click)="sidenav.toggle()"></app-header>
+<app-header [isSideNaviOpen]="sideNaviIsOpen" (naviClick)='sideNaviClick($event)'></app-header>
 
 <mat-sidenav-container [hasBackdrop]="false">
   <mat-sidenav (click)="sidenav.toggle()" (opened)="log('Is opened')" (closed)="log('Is closed')" #sidenav mode="over" [(opened)]="opened"
