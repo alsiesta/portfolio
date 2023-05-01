@@ -5,8 +5,9 @@
 }
 
 .active{
-  background-color: rgb(43, 226, 113);
+    border-bottom: 4px solid $green;
 }
+
 nav {
   display: flex;
   height: $menuHeight;
@@ -54,6 +55,7 @@ nav {
       font-size: 1.4rem;
       font-weight: 400;
       color: $white;
+      cursor: pointer;
     }
   }
 

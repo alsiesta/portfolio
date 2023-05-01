@@ -6,8 +6,10 @@ import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements AfterViewInit {
-  sideNavOpenIcon = "./assets/svg/close.svg"
-  sideNavClosedIcon = "./assets/svg/burger.svg"
+  sideNavOpenIcon = "./assets/svg/close.svg";
+  sideNavClosedIcon = "./assets/svg/burger.svg";
+  activeLink:string = "";
+
   
   //nur um zu testen, welchen status die Variable nach dem Load der Seite hat
   ngAfterViewInit(): void {
@@ -16,7 +18,7 @@ export class HeaderComponent implements AfterViewInit {
 
   @Output() naviClick: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() isSideNaviOpen: boolean | undefined;
-  
+
 
 
   toggleMenu() {
@@ -27,23 +29,28 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   toHome() {
-    document.getElementById('home')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "";
   }
 
   toAbout() {
-    document.getElementById('about')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "aboutme"; 
   }
 
   toSkills() {
-    document.getElementById('skills')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "myskills"; 
   }
 
   toPortfolio() {
-    document.getElementById('portfolio')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "portfolio";
   }
 
   toContact() {
-    document.getElementById('contact')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "contact"; 
   }
 
 }

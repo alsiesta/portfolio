@@ -29,7 +29,14 @@ mat-drawer{
 }
 
 .active{
-  background-color: rgb(43, 226, 113);
+  cursor: pointer;
+  border-bottom: 4px solid $green;
 }
+
+.menu-item{
+  cursor: pointer;
+}
+
+
 
 
