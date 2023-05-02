@@ -13,38 +13,152 @@
 }
 
 mat-card {
+  top: 2rem;
+  height: 30rem;
   z-index: 3;
   width: 100%;
-  // background-color: rgba(67, 214, 38, 0.647)!important;
   box-shadow: none;
 }
+
 mat-card-content {
   width: 100%;
 }
 
 .mat-mdc-card-content {
   padding: 0 0;
+
+  :last-child {
+  // padding-top: 0px;
+  // padding-bottom: 0px;
+}
+}
+
+
+.copy-field-grid {
+  position: relative;
+  top: 200px;
+  height: 350px;
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "one one two two two";
+  :nth-child(1) {
+    // background-color: rgba(128, 109, 0, 0.429);
+    grid-area: one;
+  }
+  
+  :nth-child(2) {
+    // background-color: rgba(0, 128, 0, 0.429);
+    grid-area: two;
+  }
+
+  @media (max-width: $breakpointMedium) {
+    grid-template-areas:
+      "one"
+      "two";
+  }
+}
+
+.name-container-parent{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.name-container-child{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.vertical-copy1 {
+  display: flex;
+  justify-content: flex-start;
+  width: 10%;
+  z-index: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 0 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  @media (min-width: ($breakpointExpanded + (350px))) {
+    font-size: 68px;
+  }
+  @media (max-width: ($breakpointExpanded + (350px))) {
+    font-size: 66px;
+  }
+  @media (max-width: ($breakpointExpanded + (100px))) {
+    font-size: 62px;
+  }
+  @media (max-width: $breakpointExpanded) {
+    font-size: 52px;
+  }
+  @media (max-width: $breakpointMedium) {
+    font-size: 40px;
+  }
+  @media (max-width: $breakpointCompact) {
+    font-size: 34px;
+  }
+  @media (max-width: 392px) {
+    font-size: 50px;
+    margin: 0;
+  }
+}
+
+.name1 {
+  // text-align: justify;
+  // display: table;
+  font-style: normal;
+  margin-bottom: 28px;
+  font-family: "Poppins";
+  // width: 100%;
+  font-weight: 700;
+  font-size: clamp(28px, 4.3vw, 65px);
+  // letter-spacing: auto;
+  line-height: 120%;
+  @media (max-width: 392px) {
+    line-height: 100%;
+  }
+}
+.profession1 {
+  // text-align: justify;
+  // display: flex;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(28px, 4.3vw, 65px);
+  line-height: 80%;
+  text-transform: uppercase;
+  color: #9747ff;
+  @media (max-width: 392px) {
+    line-height: 100%;
+  }
 }
 
 .shadows {
-  position: relative;
+  position: fixed;
+  // top: 0px;
   display: flex;
   justify-content: flex-end;
-  width: 80%;
+  // width: 100%;
   overflow: hidden;
-  height: 80vh;
+  // height: 100%;
   z-index: -1;
   @media (max-width: $breakpointMedium) {
     width: 100%;
   }
 
   svg:nth-child(1) {
-    position: absolute;
-    display: flex;
-    left: -350px;
+    position: relative;
+    // display: flex;
+    left: 0;
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    height: auto;
+    // max-height: 100%;
     @media (max-width: $breakpointMedium) {
       left: -150px;
     }
@@ -54,11 +168,11 @@ mat-card-content {
   }
   svg:nth-child(2) {
     position: relative;
-    display: flex;
-    left: -100px;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
+    // display: flex;
+    left: -200px;
+    width: 140%;
+    height: 500px;
+    // max-height: 100%;
     @media (max-width: $breakpointMedium) {
       left: 150px;
     }
@@ -88,24 +202,24 @@ mat-card-content {
 
   @media (min-width: ($breakpointExpanded + (350px))) {
     top: 20px;
-    left: 210px;
+    left: 220px;
     height: 500px;
   }
   @media (max-width: ($breakpointExpanded + (350px))) {
     display: flex;
     // left: 150px;
     top: 20px;
-    left: 80px;
+    left: 220px;
     height: 500px;
   }
   @media (max-width: ($breakpointExpanded + (100px))) {
     height: 500px;
-    left: 80px;
+    left: 200px;
     bottom: 0;
   }
   @media (max-width: $breakpointExpanded) {
     height: 500px;
-    left: 60px;
+    left: 160px;
     bottom: 0;
   }
   @media (max-width: $breakpointMedium) {
@@ -148,7 +262,7 @@ mat-card-content {
 }
 
 .flex{
-  display: flex;
+  // display: flex;
 }
 
 // .spacer1 {
@@ -282,8 +396,8 @@ mat-card-content {
   display: flex;
   margin-left: 0px;
   width: 100%;
-  justify-content: flex-start!important;
-  align-items: flex-start!important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
   // height: 25vh;
   img {
     margin: 0 20px;
@@ -343,17 +457,17 @@ bottom: 40px;  }
 .contact-btn {
   position: relative;
   z-index: 5;
-  margin-top: 20px;
+  margin-top: 40px;
   
   
   @media(max-width: 1000px) {
     margin-top: 8px;
   }
-
+  
   a {
-      font-size: calc(23px + 0.4vw);
+    padding:  10px 20px;
+    font-size: calc(23px + 0.4vw);
       background-color: #70E61C;
-      padding: 16px;
       color: white;
       border: none;
       border-radius: 10px;
@@ -376,17 +490,17 @@ bottom: 40px;  }
     }
     
     
-    .contact-btn-box{
-      position: absolute;
-      z-index: 2;
-        display: flex;
-      width: 45%!important;
-      right: 0;
-      top: 340px;
+    // .contact-btn-box{
+    //   position: absolute;
+    //   z-index: 2;
+    //     display: flex;
+    //   width: 45%!important;
+    //   right: 0;
+    //   top: 340px;
       
-      @media (max-width: $breakpointMedium) {
-        align-items: center;
-        width: 60%!important;
-        top: 556px;
-      }
-    }
+    //   @media (max-width: $breakpointMedium) {
+    //     align-items: center;
+    //     width: 60%!important;
+    //     top: 556px;
+    //   }
+    // }

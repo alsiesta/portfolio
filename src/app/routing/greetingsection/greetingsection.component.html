@@ -3,7 +3,23 @@
     <img class="vector" src="./assets/img/vector.png">
 </div>
 
-<mat-card class="copy-container-parent flex">
+<mat-card class="copy-field-grid">
+    <mat-card-content>content</mat-card-content>
+    <mat-card-content class="name-container-parent">
+        <mat-card-content class="vertical-copy1">
+            <mat-card-content>I am</mat-card-content>
+        </mat-card-content>
+        <mat-card-content class="name-container-child">
+            <div class="name1">Alexander Schönfeld</div>
+            <div class="profession1">Front-End Designer</div>
+            <div class="contact-btn">
+                <a (click)="toContact()"> Let's talk! </a>
+            </div>
+        </mat-card-content>
+    </mat-card-content>
+</mat-card>
+
+<!-- <mat-card class="copy-container-parent flex">
     <mat-card-content class="flex">
         <div class="copy-container-child">
             <h1 class="vertical-copy">I am</h1>
@@ -17,13 +33,13 @@
             </div>
         </div>
     </mat-card-content>
-</mat-card>
-<mat-card class="contact-btn-box">
+</mat-card> -->
+<!-- <mat-card class="contact-btn-box">
     <mat-card-content>
         <div class="contact-btn">
             <a (click)="toContact()" class="contact-btn"> Let's talk! </a>
         </div>
-        <!-- <div>
+        <div>
             <button mat-raised-button style="
             height:58px; 
             width:165px; 
@@ -33,9 +49,9 @@
             font-size: 23px;
             color: white;
             line-height: 120%;" color="primary">Let's talk</button>
-        </div> -->
+        </div>
     </mat-card-content>
-</mat-card>
+</mat-card> -->
 <mat-card class="social-links">
     <mat-card-content class="flex">
 
@@ -55,10 +71,9 @@
 <mat-card class="social-links">
     <mat-card-content class="flex">
 
-        <div data-aos="zoom-in-up" class="scroll-down-arrow">
+        <div class="scroll-down-arrow">
             <span>
                 Scroll down
-
                 <img src="./assets/svg/arrow_down_white.svg">
             </span>
         </div>
