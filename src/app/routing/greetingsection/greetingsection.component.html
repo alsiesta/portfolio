@@ -1,86 +1,7 @@
 <div class="curve-image-container">
-    <img class="profile-image1" src="./assets/img/profile-image1.png">
+    <img class="profile-image" src="./assets/img/profile-image1.png">
     <img class="vector" src="./assets/img/vector.png">
 </div>
-
-<mat-card class="copy-field-grid">
-    <mat-card-content>content</mat-card-content>
-    <mat-card-content class="name-container-parent">
-        <mat-card-content class="vertical-copy1">
-            <mat-card-content>I am</mat-card-content>
-        </mat-card-content>
-        <mat-card-content class="name-container-child">
-            <div class="name1">Alexander Schönfeld</div>
-            <div class="profession1">Front-End Designer</div>
-            <div class="contact-btn">
-                <a (click)="toContact()"> Let's talk! </a>
-            </div>
-        </mat-card-content>
-    </mat-card-content>
-</mat-card>
-
-<!-- <mat-card class="copy-container-parent flex">
-    <mat-card-content class="flex">
-        <div class="copy-container-child">
-            <h1 class="vertical-copy">I am</h1>
-            <div class="name-container">
-                <div class="headline">
-                    Alexander Schönfeld
-                </div>
-                <div class="profession">
-                    Frontend Developer
-                </div>
-            </div>
-        </div>
-    </mat-card-content>
-</mat-card> -->
-<!-- <mat-card class="contact-btn-box">
-    <mat-card-content>
-        <div class="contact-btn">
-            <a (click)="toContact()" class="contact-btn"> Let's talk! </a>
-        </div>
-        <div>
-            <button mat-raised-button style="
-            height:58px; 
-            width:165px; 
-            font-family: Poppins;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 23px;
-            color: white;
-            line-height: 120%;" color="primary">Let's talk</button>
-        </div>
-    </mat-card-content>
-</mat-card> -->
-<mat-card class="social-links">
-    <mat-card-content class="flex">
-
-        <div class="blue-line"></div>
-        <div class="social-icon">
-            <img src="./assets/svg/github_icon.svg">
-            <img src="./assets/svg/email_icon.svg">
-            <img src="./assets/svg/linkedin_icon.svg">
-        </div>
-
-        <span class="email">as@daslizenzatelier.de</span>
-
-    </mat-card-content>
-</mat-card>
-
-
-<mat-card class="social-links">
-    <mat-card-content class="flex">
-
-        <div class="scroll-down-arrow">
-            <span>
-                Scroll down
-                <img src="./assets/svg/arrow_down_white.svg">
-            </span>
-        </div>
-
-    </mat-card-content>
-</mat-card>
-
 
 <div class="shadows">
     <svg width="554" height="795" viewBox="0 0 554 795" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,3 +35,36 @@
         </defs>
     </svg>
 </div>
+
+<mat-card class="copy-container-grid">
+    <mat-card-content></mat-card-content>
+    <mat-card-content class="copy-fields-grid">
+        <mat-card-content class="vertical-copy">
+            I am
+        </mat-card-content>
+        <mat-card-content class="name-container">
+            <div class="name">Alexander Schönfeld</div>
+            <div class="profession1">Front-End Designer</div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="contact-btn">
+                <a (click)="toContact()"> Let's talk! </a>
+            </div>
+        </mat-card-content>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="social-links">
+    <mat-card-content class="flex">
+
+        <div class="scroll-down-arrow">
+            <span>
+                Scroll down
+                <img src="./assets/svg/arrow_down_white.svg">
+            </span>
+        </div>
+
+    </mat-card-content>
+</mat-card>
+
+

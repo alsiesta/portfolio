@@ -1,0 +1,78 @@
+@import "/src/styles/utils/variables";
+
+:host {
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.social-container {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  margin-left: 0px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    margin: 0 20px;
+  }
+  @media (max-width: $breakpointMedium) {
+    bottom: 40px;
+  }
+  @media (max-width: $breakpointMedium) {
+    bottom: -40px;
+    
+  }
+  @media (max-width: $breakpointCompact) {
+   
+  }
+  @media (max-width: 450px) {
+  
+  }
+  @media (max-width: 392px) {
+   
+    }
+}
+
+.social-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+[decor-line] {
+  position: relative;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  width: 20%;
+}
+[decor-line]::after {
+  content: attr(decor-line);
+  z-index: 20;
+  position: relative;
+  right: 0;
+  margin-left: 0;
+  height: 4px;
+  min-width: 100%;
+  border-bottom: 4px solid $purple;
+  color: transparent;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email{
+@media (max-width: $breakpointCompact) {
+  display: none;
+}
+
+}

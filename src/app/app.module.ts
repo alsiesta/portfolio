@@ -19,6 +19,7 @@ import { PortfolioCaseComponent } from './shared/portfolio-case/portfolio-case.c
 import { PortfolioComponent } from './routing/portfolio/portfolio.component';
 import { ContactComponent } from './routing/contact/contact.component';
 import { ImprintComponent } from './routing/imprint/imprint.component';
+import { SocialLinksComponent } from './shared/social-links/social-links.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { ImprintComponent } from './routing/imprint/imprint.component';
     PortfolioComponent,
     ContactComponent,
     ImprintComponent,
+    SocialLinksComponent,
   ],
   imports: [
     BrowserModule,
