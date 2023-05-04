@@ -18,11 +18,9 @@
   grid-auto-columns: 1fr;
   grid-template-areas: "one one two two two";
   :nth-child(1) {
-    background-color: rgba(0, 128, 0, 0.429);
     grid-area: one;
   }
   :nth-child(2) {
-    background-color: rgba(0, 128, 0, 0.429);
     grid-area: two;
   }
   
@@ -40,9 +38,9 @@
 
 }
 
-mat-card {
-  padding: 10px 30px;
-}
+// mat-card {
+//   padding: 10px 30px;
+// }
 
 
 

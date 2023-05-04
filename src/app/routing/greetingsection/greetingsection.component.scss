@@ -76,20 +76,19 @@ mat-card-content {
   }
   @media (max-width: $breakpointCompact) {
     grid-template-areas:
-    "one one two two two two two two  "
-    "three three three three three three three three  ";
+      "one one two two two two two two  "
+      "three three three three three three three three  ";
   }
   @media (max-width: 450px) {
     grid-template-areas:
-    "one  two two two two two two  "
-    "three  three three three three three three  ";
+      "one  two two two two two two  "
+      "three  three three three three three three  ";
   }
   @media (max-width: 392px) {
     grid-template-areas:
-    "one two two two two two two two two "
-    "three three three three three three three three three ";
-    }
-
+      "one two two two two two two two two "
+      "three three three three three three three three three ";
+  }
 
   :nth-child(1) {
     grid-area: one;
@@ -183,68 +182,97 @@ mat-card-content {
   position: relative;
   z-index: -1;
   @media (max-width: $breakpointMedium) {
-    
-  }
-  
-  svg:nth-child(1) {
-    border: yellow solid 4px;
-    position: absolute;
-    left: -100px;
-    top: -60px;
-    max-height: 580px;
-    max-width: 100%;
-    
-    @media (max-width: $breakpointMedium) {
-    }
-    @media (max-width: $breakpointCompact) {
-      max-height: 500px;
-      left: -150px; 
-    }
-  }
-  
-  svg:nth-child(2) {
-    max-width: 100%;
-    border: yellow solid 4px;
-    position: absolute;
-    left: 200px;
-    max-height: 580px;
-    
-    @media (max-width: $breakpointMedium) {
-      left: 120px;
-    }
-    @media (max-width: $breakpointCompact) {
-      left: 80px;
-    }
   }
 
-  // img:nth-child(1) {
+  // svg:nth-child(1) {
+  //   border: yellow solid 4px;
   //   position: absolute;
   //   left: -100px;
-  //   top: -60px;
-  //   min-width: 40%;
-  //   max-height: 680px;
-    
-  //   @media (max-width: $breakpointMedium) {
-  //   }
-  
-  //   @media (max-width: $breakpointCompact) {
-  //     max-height: 500px;
-  //     left: -150px; 
-  //   }
-  // }
-  // img:nth-child(2) {
-  //   position: absolute;
-  //   left: 200px;
-  //   min-width: 40%;
+  //   // width: auto;
+  //   // top: 0px;
   //   max-height: 580px;
+  //   // max-width: 100%;
 
   //   @media (max-width: $breakpointMedium) {
-  //     left: 120px;
+  //     // left: -100px;
+  //   }
+  //   @media (max-width: ($breakpointMedium - 160)) {
+  //     left: -150px;
   //   }
   //   @media (max-width: $breakpointCompact) {
-  //     left: 80px;
+  //     max-height: 500px;
   //   }
   // }
+
+  // svg:nth-child(2) {
+  //   // max-width: 100%;
+  //   border: yellow solid 4px;
+  //   overflow: hidden;
+  //   position: absolute;
+  //   left: 200px;
+  //   max-height: 580px;
+  //   width: auto;
+
+  //   @media (max-width: $breakpointMedium) {
+  //     left: 160px;
+  //     // left: 140px;
+  //   }
+  //   @media (max-width: ($breakpointMedium - 160)) {
+  //     left: 50px;
+  //     // left: 140px;
+  //   }
+  //   @media (max-width: $breakpointCompact) {
+  //     left: 0px;
+  //   }
+  // }
+
+  img:nth-child(1) {
+    // border: rgb(0, 255, 234) solid 4px;
+    position: absolute;
+    left: -50px;
+    top: -10px;
+    max-width: 80%;
+    max-height: 600px;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+
+    @media (max-width: $breakpointMedium) {
+      width: auto;
+    }
+
+    @media (max-width: $breakpointCompact) {
+      // left: -180px;
+      // width: auto;
+    }
+  }
+  img:nth-child(2) {
+    background-size: cover;
+    // border: yellow solid 4px;
+    position: absolute;
+    left: 200px;
+    max-width: 80%;
+    max-height: 550px;
+    height: auto;
+    overflow: hidden;
+
+    @media (max-width: $breakpointMedium) {
+      width: auto;
+    }
+
+    @media (max-width: ($breakpointCompact + 160px)) {
+      left: 90px;
+    }
+    @media (max-width: ($breakpointCompact)) {
+      left: 60px;
+    }
+    @media (max-width: 392px) {
+      left: 40px;
+    }
+    // @media (max-width: 280px) {
+    //   left: 20px;
+    // }
+  }
 }
 
 .curve-image-container {
@@ -383,7 +411,7 @@ mat-card-content {
 
 .scroll-down-arrow {
   position: absolute;
-  bottom: - 50px;
+  bottom: -50px;
   right: 30px;
   writing-mode: vertical-rl;
   font-family: "Poppins";
@@ -395,7 +423,6 @@ mat-card-content {
     display: none;
   }
 }
-
 
 .contact-btn {
   position: relative;
@@ -429,4 +456,3 @@ mat-card-content {
     }
   }
 }
-

@@ -1,31 +1,31 @@
 @import "/src/styles/utils/variables";
 
 :host {
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 50px;
 }
 
+mat-card {
+  box-shadow: 0px 0px;
+}
 
 .social-container {
-  position: absolute;
+  // position: absolute;
   z-index: 2;
   display: flex;
   margin-left: 0px;
-  width: 100%;
+  width: 90%;
   justify-content: flex-start;
   align-items: center;
   img {
     margin: 0 20px;
   }
   @media (max-width: $breakpointMedium) {
-    bottom: 40px;
-  }
-  @media (max-width: $breakpointMedium) {
-    bottom: -40px;
-    
+    bottom: -120px;
   }
   @media (max-width: $breakpointCompact) {
    

@@ -13,6 +13,11 @@ mat-card{
         width: clamp(220px, 40vw, 600px);
     }
 }
+
+mat-card-content{
+  padding:0;
+}
+
 .example-header-image {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
