@@ -178,20 +178,21 @@ mat-card-content {
 }
 
 .shadows {
+  justify-content: flex-start;
   width: 100%;
   position: relative;
   z-index: -1;
-
   @media (max-width: $breakpointMedium) {
-
+    
   }
   
   svg:nth-child(1) {
+    border: yellow solid 4px;
     position: absolute;
     left: -100px;
     top: -60px;
-    min-width: 40%;
-    max-height: 680px;
+    max-height: 580px;
+    max-width: 100%;
     
     @media (max-width: $breakpointMedium) {
     }
@@ -202,11 +203,12 @@ mat-card-content {
   }
   
   svg:nth-child(2) {
+    max-width: 100%;
+    border: yellow solid 4px;
     position: absolute;
     left: 200px;
-    min-width: 40%;
     max-height: 580px;
-
+    
     @media (max-width: $breakpointMedium) {
       left: 120px;
     }
@@ -214,6 +216,35 @@ mat-card-content {
       left: 80px;
     }
   }
+
+  // img:nth-child(1) {
+  //   position: absolute;
+  //   left: -100px;
+  //   top: -60px;
+  //   min-width: 40%;
+  //   max-height: 680px;
+    
+  //   @media (max-width: $breakpointMedium) {
+  //   }
+  
+  //   @media (max-width: $breakpointCompact) {
+  //     max-height: 500px;
+  //     left: -150px; 
+  //   }
+  // }
+  // img:nth-child(2) {
+  //   position: absolute;
+  //   left: 200px;
+  //   min-width: 40%;
+  //   max-height: 580px;
+
+  //   @media (max-width: $breakpointMedium) {
+  //     left: 120px;
+  //   }
+  //   @media (max-width: $breakpointCompact) {
+  //     left: 80px;
+  //   }
+  // }
 }
 
 .curve-image-container {
