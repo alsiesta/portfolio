@@ -20,10 +20,9 @@
         </div>
     </mat-card-content>
 
-    <mat-card-content>
-        <mat-spinner *ngIf="display" ></mat-spinner>
-        <mat-spinner *ngIf="display" [style.display]="'none'"></mat-spinner>
-
+    <mat-card-content class="spinner-parent">
+        <mat-spinner *ngIf="display" class="spinner"></mat-spinner>
+        <mat-card-content *ngIf="sendSuccessfully" class="spinner" >Thank you. <br>Your inquiry was sent successfully.</mat-card-content>
 
         <form #contactForm="ngForm" novalidate (ngSubmit)="sendMail()" fxLayout="column">
 

@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { User } from '../../user';
 import { NgForm } from '@angular/forms';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -15,10 +16,17 @@ export class ContactComponent {
   @ViewChild('sendButton') sendButton!: ElementRef;
   isSending: boolean = false;
   display: boolean = false;
-
+  sendSuccessfully: boolean = false;
 
   async sendMail() {
     this.isSending = true; // disable form fields
+    this.display = true;
+
+    this.displaySpinner();
+    // setTimeout(() => {
+    //   this.display = false;
+
+    // }, 1000);
 
     let fd = new FormData();
     fd.append('name', this.userModel.username);
@@ -36,6 +44,20 @@ export class ContactComponent {
     // success message
 
     this.isSending = false; // enable form fields again
+  }
+
+  displaySpinner() {
+    setTimeout(() => {
+      this.display = false;
+      this.sendSuccessfully = true;
+      this.displaySuccess();
+    }, 1000);
+  }
+
+  displaySuccess() {
+    setTimeout(() => {
+      this.sendSuccessfully = false
+    }, 2000);
   }
 
   // getData() {
