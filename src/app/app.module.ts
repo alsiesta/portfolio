@@ -22,6 +22,7 @@ import { ImprintComponent } from './routing/imprint/imprint.component';
 import { SocialLinksComponent } from './shared/social-links/social-links.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

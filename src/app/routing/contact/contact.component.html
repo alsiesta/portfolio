@@ -1,3 +1,12 @@
+<!-- <form (submit)="sendMail()" #mailForm>
+
+    <input name="name" type="text">
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+    <button>Senden</button>
+    
+</form> -->
+
+
 <mat-card color=primary class="form-field-grid">
 
     <mat-card-content>
@@ -12,11 +21,15 @@
     </mat-card-content>
 
     <mat-card-content>
-        <form #contactForm="ngForm" action="" method="post" fxLayout="column">
+        <mat-spinner *ngIf="display" ></mat-spinner>
+        <mat-spinner *ngIf="display" [style.display]="'none'"></mat-spinner>
+
+
+        <form #contactForm="ngForm" novalidate (ngSubmit)="sendMail()" fxLayout="column">
 
             <mat-form-field appearance="outline">
                 <mat-label>Your name</mat-label>
-                <input [(ngModel)]="userModel.username"  #name="ngModel" name="username" type="text" required minlength="3"  matInput placeholder="..." >
+                <input [disabled]="isSending"  [(ngModel)]="userModel.username" #nameField #name="ngModel" name="name" type="text" required minlength="3"  matInput placeholder="..." >
                
                 <mat-icon *ngIf="name.valid" matSuffix color="primary">task_alt</mat-icon>
                 <mat-icon *ngIf="name.invalid && (name.dirty || name.touched )" matSuffix color="warn">error</mat-icon>
@@ -25,7 +38,7 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Your email</mat-label>
-                <input [(ngModel)]="userModel.email" #email="ngModel" name="email" ngModel type="text" required  matInput placeholder="..." >
+                <input [disabled]="isSending"  [(ngModel)]="userModel.email" #emailField #email="ngModel" name="email" ngModel type="text" required  matInput placeholder="..." >
               
                 <mat-icon *ngIf="validateEmail()" matSuffix color="primary">task_alt</mat-icon>
                 <mat-icon *ngIf="!validateEmail() && (email.dirty || email.touched )" matSuffix color="warn">error</mat-icon>
@@ -34,7 +47,7 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Your message</mat-label>
-                <textarea [(ngModel)]="userModel.message" #message="ngModel" name="message" ngModel type="text" required minlength="5"  matInput placeholder="..." rows="5" ></textarea>
+                <textarea [disabled]="isSending" [(ngModel)]="userModel.message" #messageField disabled #message="ngModel" name="message" ngModel type="text" required minlength="5"  matInput placeholder="..." rows="5" ></textarea>
               
                 <mat-icon *ngIf="message.valid" matSuffix color="primary">task_alt</mat-icon>
                 <mat-icon *ngIf="message.invalid && (message.dirty || message.touched )" matSuffix color="warn">error</mat-icon>
@@ -42,7 +55,7 @@
                 
             </mat-form-field>
 <small class="required-field">* required input</small>
-            <button [disabled]="contactForm.form.invalid" mat-raised-button color="primary">Senden</button>
+            <button #sendButton [disabled]="contactForm.form.invalid || isSending" mat-raised-button color="primary">Senden</button>
         </form>
     </mat-card-content>
 

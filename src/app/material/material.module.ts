@@ -8,6 +8,8 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
 
 const MaterialComponents = [    
@@ -20,7 +22,8 @@ const MaterialComponents = [
   MatInputModule,
   MatSidenavModule,
   MatListModule,
-  FlexLayoutModule,]
+  FlexLayoutModule,
+  MatProgressSpinnerModule]
 
 @NgModule({
   imports: [MaterialComponents],

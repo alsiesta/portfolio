@@ -40,10 +40,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
         exit;
     case ("POST"): //Send the email;
 
-        $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@developerakademie.com";
+        $subject = "Portfolio Contact Request: " . $_POST['email'];
+        $headers = "From: noreply@developerakademie.com";
+        $body = "REQEUEST FROM PORTFOLIO CONTACT FORM" . "\n" . "\n" ."Name: " . $_POST['name'] . "\n" ."E-mail: ". $_POST['email'] . "\n" . "\n" .  "Message: ". "\n" . $_POST['message'];
 
-        mail($recipient, $subject, $_POST['message'], $headers);
+        mail($recipient, $subject, $body, $headers);
         header("Location: " . $redirect); 
 
         break;
