@@ -28,14 +28,11 @@ mat-card {
     bottom: -120px;
   }
   @media (max-width: $breakpointCompact) {
-   
   }
   @media (max-width: 450px) {
-  
   }
   @media (max-width: 392px) {
-   
-    }
+  }
 }
 
 .social-links {
@@ -68,11 +65,23 @@ mat-card {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  svg {
+    width: 60px;
+    fill: $white;
+    cursor: pointer;
+
+    &:hover {
+      fill: $green;
+      transform: scale(1.2);
+      transition: background 0.2s, transform 0.2s ease-out, fill 0.2s;
+    }
+  }
+
 }
 
-.email{
-@media (max-width: $breakpointCompact) {
-  display: none;
-}
-
+.email {
+  @media (max-width: $breakpointCompact) {
+    display: none;
+  }
 }

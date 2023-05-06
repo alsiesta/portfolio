@@ -17,6 +17,8 @@ export class ContactComponent {
   isSending: boolean = false;
   display: boolean = false;
   sendSuccessfully: boolean = false;
+  activeLink:string = "";
+
 
   async sendMail() {
     this.isSending = true; // disable form fields
@@ -57,13 +59,11 @@ export class ContactComponent {
     }, 2000);
   }
 
-  // getData() {
-  //   this.fd.append('name', this.userModel.username);
-  //   this.fd.append('email', this.userModel.email);
-  //   this.fd.append('message', this.userModel.message);
-  //   return this.fd;
-  // }
-
+  toHome() {
+    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "";
+  }
+  
   validateEmail() {
     const regex =
       /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
