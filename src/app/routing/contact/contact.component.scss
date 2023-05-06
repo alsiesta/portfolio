@@ -23,33 +23,33 @@
   :nth-child(2) {
     grid-area: two;
   }
-  
+
   @media (max-width: $breakpointMedium) {
     grid-template-areas:
-    "one"
-    "two";
+      "one"
+      "two";
   }
 }
 
-.required-field{
+.required-field {
   color: rgba(255, 255, 255, 0.6);
   margin-left: 15px;
   margin-bottom: 20px;
-
 }
 
-.spinner-parent{
+.spinner-parent {
   position: relative;
 }
 
-.spinner{
+.spinner {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);  z-index: 3;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
-.thankyou{
+.thankyou {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,17 +57,28 @@
   height: 80%;
   border: solid 2px;
   border-radius: 5px;
-  background-color:#141d2fc0;
+  background-color: #141d2fc0;
   font-weight: 700;
   font-size: 32px;
   color: $green;
-  text-align: center;  
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);  z-index: 3;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
+mat-icon {
+  cursor: pointer;
+  color: $white;
+  border: 2px solid $white;
+  border-radius: 50%;
+  padding: 4px;
 
-
-
+  &:hover,
+  &:focus {
+    border: 2px solid $green;
+    color: $green;
+  }
+}

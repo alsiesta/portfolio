@@ -94,6 +94,10 @@ $my-form-theme: mat.define-dark-theme(
   border-color: red !important;
  }
 
-
+ //overwriting all material boxshadow to make them invisible
+ .mat-mdc-card {
+  box-shadow: 0px 0px 0px 0px $transparent, 0px 0px 0px 0px$transparent, 0px 0px 0px 0px $transparent;
+  --mdc-elevated-card-container-color: $transparent;
+}
 
 
