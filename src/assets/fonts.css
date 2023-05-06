@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Poppins';
     src: url('/portfolio/assets/fonts/Poppins-ExtraBold.woff2') format('woff2'),
         url('/portfolio/assets/fonts/Poppins-ExtraBold.woff') format('woff');
@@ -77,11 +77,11 @@
     font-weight: 300;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 
 
-/* 
+
  @font-face {
     font-family: 'Poppins';
     src: url('/assets/fonts/Poppins-ExtraBold.woff2') format('woff2'),
@@ -163,4 +163,4 @@
     font-display: swap;
 }
 
- */
+

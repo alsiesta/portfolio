@@ -23,10 +23,7 @@ export class ContactComponent {
     this.display = true;
 
     this.displaySpinner();
-    // setTimeout(() => {
-    //   this.display = false;
 
-    // }, 1000);
 
     let fd = new FormData();
     fd.append('name', this.userModel.username);
