@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  activeLink:string = "";
 
+  toHome() {
+    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+    this.activeLink = "";
+  }
 }
