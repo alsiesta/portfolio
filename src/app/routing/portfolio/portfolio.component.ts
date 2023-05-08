@@ -15,8 +15,8 @@ export class PortfolioComponent {
       img: './assets/img/portfolio-case-join.png',
       expertise: 'JavaScript| HTML | CSS',
       description: 'Join app description.',
-      livelink: '',
-      githublink:'',
+      linkWebCase: 'https://alexander-schoenfeld.developerakademie.net/join/',
+      linkGitCase:'https://github.com/alsiesta/join',
     },
     {
       id: 1,
@@ -24,8 +24,8 @@ export class PortfolioComponent {
       img: './assets/img/portfolio-case-pokedex.png',
       expertise: 'JavaScript| HTML | CSS | Api',
       description: 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.',
-      livelink: '',
-      githublink:'',
+      linkWebCase: 'https://alexander-schoenfeld.developerakademie.net/pokedex/',
+      linkGitCase:'https://github.com/alsiesta/pokedex',
     },
     {
       id: 2,
@@ -33,17 +33,17 @@ export class PortfolioComponent {
       img: './assets/img/portfolio-case-elpolloloco.png',
       expertise: 'JavaScript| HTML | CSS | Api',
       description: 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.',
-      livelink: '',
-      githublink:'',
+      linkWebCase: 'https://alexander-schoenfeld.developerakademie.net/polloloco/',
+      linkGitCase:'https://github.com/alsiesta/PolloLoco',
     },
     {
       id: 3,
-      name: 'CRM',
+      name: 'Platzhalter',
       img: './assets/img/portfolio-case-crm.png',
-      expertise: 'JavaScript| HTML | CSS | Api',
-      description: 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.',
-      livelink: '',
-      githublink:'',
+      expertise: 'Platzhalter Copy',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum tempore iste ut nihil nemo eveniet.',
+      linkWebCase: '#',
+      linkGitCase:'#',
     }
   ];
 }

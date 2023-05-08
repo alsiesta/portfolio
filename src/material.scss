@@ -100,4 +100,24 @@ $my-form-theme: mat.define-dark-theme(
   --mdc-elevated-card-container-color: $transparent;
 }
 
+.mat-mdc-raised-button{
+  background-color: $purple!important;
+  color: $white!important;
+  &:hover{
+    filter:brightness(1.2);
+  }
+  &:focus{
+    background-color: $green!important;
+  }
+}
+.mdc-button--outlined{
+  border: solid 2px $green!important;
+  color: $white!important;
+  &:hover{
+    filter:brightness(1.2);
+  }
+  &:focus{
+    background-color: $green!important;
+  }
+}
 

@@ -15,9 +15,9 @@
     
   
     <mat-card-actions fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center">
-      <button mat-raised-button color="primary" class="regular primary-button">LIVE TEST</button>  
+      <a href="{{ case.linkWebCase }}" target="_blank"><button mat-raised-button class="regular">LIVE TEST</button></a>  
       <div class="spacer"></div>
-      <button mat-stroked-button color="accent" class="regular secondary-button">GitHub</button>
+      <a href="{{ case.linkGitCase }}" target="_blank"><button mat-stroked-button class="regular">GitHub</button></a>
     </mat-card-actions>
 </mat-card-content>
 
