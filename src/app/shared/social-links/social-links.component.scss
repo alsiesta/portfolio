@@ -77,11 +77,30 @@ mat-card {
       transition: background 0.2s, transform 0.2s ease-out, fill 0.2s;
     }
   }
-
 }
 
 .email {
+  text-decoration: none;
+  color: $white;
+
+  &:hover {
+    text-decoration: underline;
+  }
   @media (max-width: $breakpointCompact) {
     display: none;
   }
 }
+
+a{
+   cursor: pointer;
+
+   &:link{
+     text-decoration: none;
+   }
+   &:visited{
+     text-decoration: none;
+   }
+   &:hover {
+     text-decoration: underline;
+   }
+ } 

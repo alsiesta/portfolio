@@ -14,6 +14,7 @@ export class ContactComponent {
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+  @ViewChild('contactForm') mytemplateForm : NgForm | undefined; 
   isSending: boolean = false;
   display: boolean = false;
   sendSuccessfully: boolean = false;
@@ -39,8 +40,6 @@ export class ContactComponent {
         body: fd,
       }
     );
-
-    // success message
 
     this.isSending = false; // enable form fields again
   }

@@ -22,42 +22,53 @@
 
     <mat-card-content class="spinner-parent">
         <mat-spinner *ngIf="display" class="spinner"></mat-spinner>
-        <mat-card-content *ngIf="sendSuccessfully" class="thankyou"><div>Thank you. <br>Your inquiry was sent successfully.</div></mat-card-content>
+        <mat-card-content *ngIf="sendSuccessfully" class="thankyou">
+            <div>Thank you. <br>Your inquiry was sent successfully.</div>
+        </mat-card-content>
 
-        <form #contactForm="ngForm" novalidate (ngSubmit)="sendMail()" fxLayout="column">
+        <form #contactForm="ngForm" novalidate (ngSubmit)="sendMail();contactForm.resetForm()" fxLayout="column">
 
             <mat-form-field appearance="outline">
                 <mat-label>Your name</mat-label>
-                <input [disabled]="isSending"  [(ngModel)]="userModel.username" #nameField #name="ngModel" name="name" type="text" required minlength="3"  matInput placeholder="..." >
-               
+                <input [disabled]="isSending" [(ngModel)]="userModel.username" #nameField #name="ngModel" name="name"
+                    type="text" required minlength="3" matInput placeholder="...">
+
                 <mat-icon *ngIf="name.valid" matSuffix color="primary">task_alt</mat-icon>
                 <mat-icon *ngIf="name.invalid && (name.dirty || name.touched )" matSuffix color="warn">error</mat-icon>
-                <mat-hint *ngIf="name.invalid  && (name.dirty || name.touched )" style="color:red">Name has to have 3 characters minimum</mat-hint>
+                <mat-hint *ngIf="name.invalid  && (name.dirty || name.touched )" style="color:red">Name has to have 3
+                    characters minimum</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
                 <mat-label>Your email</mat-label>
-                <input [disabled]="isSending"  [(ngModel)]="userModel.email" #emailField #email="ngModel" name="email" ngModel type="text" required  matInput placeholder="..." >
-              
+                <input [disabled]="isSending" [(ngModel)]="userModel.email" #emailField #email="ngModel" name="email"
+                    ngModel type="text" required matInput placeholder="...">
+
                 <mat-icon *ngIf="validateEmail()" matSuffix color="primary">task_alt</mat-icon>
-                <mat-icon *ngIf="!validateEmail() && (email.dirty || email.touched )" matSuffix color="warn">error</mat-icon>
-                <mat-hint *ngIf="!validateEmail()  && (email.dirty || email.touched )" style="color:red">Sorry, your email is not valid</mat-hint>
+                <mat-icon *ngIf="!validateEmail() && (email.dirty || email.touched )" matSuffix
+                    color="warn">error</mat-icon>
+                <mat-hint *ngIf="!validateEmail()  && (email.dirty || email.touched )" style="color:red">Sorry, your
+                    email is not valid</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
                 <mat-label>Your message</mat-label>
-                <textarea [disabled]="isSending" [(ngModel)]="userModel.message" #messageField disabled #message="ngModel" name="message" ngModel type="text" required minlength="5"  matInput placeholder="..." rows="5" ></textarea>
-              
+                <textarea [disabled]="isSending" [(ngModel)]="userModel.message" #messageField disabled
+                    #message="ngModel" name="message" ngModel type="text" required minlength="5" matInput
+                    placeholder="..." rows="5"></textarea>
+
                 <mat-icon *ngIf="message.valid" matSuffix color="primary">task_alt</mat-icon>
-                <mat-icon *ngIf="message.invalid && (message.dirty || message.touched )" matSuffix color="warn">error</mat-icon>
-                <mat-hint *ngIf="message.invalid  && (message.dirty || message.touched )" style="color:red">Your message should include 5 characters minimum</mat-hint>
-                
+                <mat-icon *ngIf="message.invalid && (message.dirty || message.touched )" matSuffix
+                    color="warn">error</mat-icon>
+                <mat-hint *ngIf="message.invalid  && (message.dirty || message.touched )" style="color:red">Your message
+                    should include 5 characters minimum</mat-hint>
+
             </mat-form-field>
-<small class="required-field">* required input</small>
-            <button #sendButton [disabled]="contactForm.form.invalid || isSending" mat-raised-button color="primary">Senden</button>
+            <small class="required-field">* required input</small>
+            <button #sendButton [disabled]="contactForm.form.invalid || isSending" mat-raised-button
+                color="primary">Senden</button>
         </form>
     </mat-card-content>
-
 </mat-card>
 <mat-card>
     <mat-card-content fxFlex fxLayoutAlign="end">

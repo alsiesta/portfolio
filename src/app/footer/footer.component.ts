@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   activeLink:string = "";
 
+  sendMail() {
+    "mailto:as@daslizenzatelier.de?Subject=Hello&nbsp;body=MoinAlexander";
+    console.log('sent mail');
+    
+  }
+
+  
   toHome() {
     document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
     this.activeLink = "";
+
   }
 }
