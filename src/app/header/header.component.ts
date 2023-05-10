@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,12 @@ import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements AfterViewInit {
+
   sideNavOpenIcon = "./assets/svg/close.svg";
   sideNavClosedIcon = "./assets/svg/burger.svg";
   activeLink:string = "";
-
+  
+  constructor(private scroller: ViewportScroller, private route: ActivatedRoute, private router: Router){}
   
   //nur um zu testen, welchen status die Variable nach dem Load der Seite hat
   ngAfterViewInit(): void {
@@ -20,12 +24,9 @@ export class HeaderComponent implements AfterViewInit {
   @Input() isSideNaviOpen: boolean | undefined;
 
 
-
   toggleMenu() {
     console.log('toggle was clicked Header and SideNaviOpen status is: ',this.isSideNaviOpen);    
     this.naviClick.emit(this.isSideNaviOpen);
-
-    // this.isSideNaviOpen = !this.isSideNaviOpen
   }
 
   toHome() {
@@ -51,6 +52,12 @@ export class HeaderComponent implements AfterViewInit {
   toContact() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     this.activeLink = "contact"; 
+  }
+
+  getLocation() {
+    let url = window.location.href;
+    let location = url.substring(url.lastIndexOf(('/')));
+    return location;
   }
 
 }

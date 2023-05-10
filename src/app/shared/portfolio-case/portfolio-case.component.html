@@ -14,7 +14,7 @@
     </mat-card-content>
     
   
-    <mat-card-actions fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center">
+    <mat-card-actions *ngIf="case.links" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center">
       <a href="{{ case.linkWebCase }}" target="_blank"><button mat-raised-button class="regular">LIVE TEST</button></a>  
       <div class="spacer"></div>
       <a href="{{ case.linkGitCase }}" target="_blank"><button mat-stroked-button class="regular">GitHub</button></a>

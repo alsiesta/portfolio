@@ -1,13 +1,13 @@
 <nav>
-  <a (click)="toHome()"><img class="logotype" src="./assets/img/logo04.png" alt=""></a>
+  <a (click)="toHome()" routerLink=""><img class="logotype" src="./assets/img/logo04.png" alt=""></a>
 
   <div class="menu-expanded">
     <span class="spacer"></span>
 
-    <a (click)="toAbout()" [ngClass]="activeLink == 'aboutme' ? 'active' : ''" class="menu-item">About me</a>
-    <a (click)="toSkills()" [ngClass]="activeLink == 'myskills' ? 'active' : ''" class="menu-item">My skills</a>
-    <a (click)="toPortfolio()" [ngClass]="activeLink == 'portfolio' ? 'active' : ''"  class="menu-item">Portfolio</a>
-    <a (click)="toContact()" [ngClass]="activeLink == 'contact' ? 'active' : ''"  class="menu-item">Contact</a>
+    <a (click)="toAbout()" routerLink="/" fragment="about" [ngClass]="activeLink == 'aboutme' ? 'active' : ''" class="menu-item">About me</a>
+    <a (click)="toSkills()" routerLink="/" fragment="skills" [ngClass]="activeLink == 'myskills' ? 'active' : ''" class="menu-item">My skills</a>
+    <a (click)="toPortfolio()" routerLink="/" fragment="portfolio" [ngClass]="activeLink == 'portfolio' ? 'active' : ''"  class="menu-item">Portfolio</a>
+    <a (click)="toContact()" routerLink="/" fragment="contact" [ngClass]="activeLink == 'contact' ? 'active' : ''"  class="menu-item">Contact</a>
 
   </div>
 

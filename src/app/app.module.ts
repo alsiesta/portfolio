@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from './material/material.module';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,13 +18,13 @@ import { HeadlineComponent } from './shared/headline/headline.component';
 import { PortfolioCaseComponent } from './shared/portfolio-case/portfolio-case.component';
 import { PortfolioComponent } from './routing/portfolio/portfolio.component';
 import { ContactComponent } from './routing/contact/contact.component';
-import { ImprintComponent } from './routing/imprint/imprint.component';
 import { SocialLinksComponent } from './shared/social-links/social-links.component';
 
 
 
 @NgModule({
   declarations: [
+    routingComponents,
     AppComponent,
     FooterComponent,
     HeaderComponent,
@@ -36,7 +36,6 @@ import { SocialLinksComponent } from './shared/social-links/social-links.compone
     PortfolioCaseComponent,
     PortfolioComponent,
     ContactComponent,
-    ImprintComponent,
     SocialLinksComponent,
   ],
   imports: [
