@@ -1,4 +1,6 @@
 @use "@angular/material" as mat;
+@use "@material/card";
+@include card.core-styles;
 @import "./styles/main";
 
 
@@ -120,5 +122,9 @@ $my-form-theme: mat.define-dark-theme(
   &:focus{
     background-color: $green!important;
   }
+}
+
+mat-divider{
+  margin: 20px 0;
 }
 
