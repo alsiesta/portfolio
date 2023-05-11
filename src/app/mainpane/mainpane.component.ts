@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MainpaneComponent {
   public headlines = ['Portfolio', 'Contact'];
-  public subheadlines = ['Portfolio subline. Lorem ipsum dolor sit amet consec tetur adipisicing elit. Voluptates culpa iste in aspernatur cupiditate nihil voluptate magni eveniet doloribus dolores inventore.', 'Contact subline. Lorem ipsum dolor sit amet consec tetur adipisicing elit. Voluptates culpa iste in aspernatur cupiditate nihil voluptate magni eveniet doloribus dolores inventore.'];
+  public subheadlines = ['Find below some case references from the last two years.', 'Please reach out to me if you need to refine your User Interface, an evaluation of your actual customer journey, proof of concept or pure frontend development support.' ];
   public fxAlignStart = "center start";
   public fxAlignEnd = "center end";
 }
