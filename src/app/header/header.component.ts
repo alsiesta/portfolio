@@ -15,7 +15,7 @@ export class HeaderComponent implements AfterViewInit {
   
   constructor(private scroller: ViewportScroller, private route: ActivatedRoute, private router: Router){}
   
-  //nur um zu testen, welchen status die Variable nach dem Load der Seite hat
+  //testing Variable state after page load
   ngAfterViewInit(): void {
     console.log('sidenaviopen: ',this.isSideNaviOpen);
   }

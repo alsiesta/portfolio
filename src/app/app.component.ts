@@ -32,24 +32,6 @@ export class AppComponent {
     });
   }
 
-  // ngOnInit() {
-  //   this.activatedRout.fragment.subscribe((value) => {
-  //     console.log(value);
-  //     setTimeout(() => {
-  //       console.log('just jumped');
-
-  //       // this.jumpTo(value || '');
-  //     }, 500);
-  //   });
-  // }
-
-  // jumpTo(section: string) {
-  //   // console.log('jumped');
-    
-  //   document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-  // }
-
-
   sideNaviClick($event: boolean) {
     console.log($event);
     this.opened = $event;
@@ -66,16 +48,6 @@ export class AppComponent {
   }
 
   toAbout() {
-    // document.getElementById('about')?.scrollIntoView({behavior:'smooth', block: "end"});
-    // const element = document.getElementById('about');
-    // const offset  = 80;
-    // const elementPosition = element!.getBoundingClientRect().top;
-    // const offsetPosition = elementPosition + window.pageYOffset + offset;
-    // window.scrollTo({
-    //   top: offsetPosition,
-    //   behavior: "smooth"
-    // });
-
     this.sideNaviIsOpen = !this.sideNaviIsOpen;
     this.activeLink = 'aboutme';
   }
