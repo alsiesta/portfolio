@@ -47,6 +47,12 @@ export class AppComponent {
     document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
   }
 
+  toAi () {
+    this.router.navigateByUrl('/ai');
+    this.sideNaviIsOpen = !this.sideNaviIsOpen;
+    this.activeLink = 'ai';
+  }
+
   toAbout() {
     this.sideNaviIsOpen = !this.sideNaviIsOpen;
     this.activeLink = 'aboutme';

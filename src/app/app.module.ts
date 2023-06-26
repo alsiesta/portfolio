@@ -19,8 +19,7 @@ import { PortfolioCaseComponent } from './shared/portfolio-case/portfolio-case.c
 import { PortfolioComponent } from './routing/portfolio/portfolio.component';
 import { ContactComponent } from './routing/contact/contact.component';
 import { SocialLinksComponent } from './shared/social-links/social-links.component';
-
-
+import { AipaneComponent } from './routing/aipane/aipane.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +36,7 @@ import { SocialLinksComponent } from './shared/social-links/social-links.compone
     PortfolioComponent,
     ContactComponent,
     SocialLinksComponent,
+    AipaneComponent,
   ],
   imports: [
     BrowserModule,

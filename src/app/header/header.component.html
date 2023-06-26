@@ -4,6 +4,7 @@
   <div class="menu-expanded">
     <span class="spacer"></span>
 
+    <a (click)="toAi()" routerLink="/" fragment="ai" [ngClass]="activeLink == 'ai' ? 'active' : ''" class="menu-item">AI Training</a>
     <a (click)="toAbout()" routerLink="/" fragment="about" [ngClass]="activeLink == 'aboutme' ? 'active' : ''" class="menu-item">About me</a>
     <a (click)="toSkills()" routerLink="/" fragment="skills" [ngClass]="activeLink == 'myskills' ? 'active' : ''" class="menu-item">My skills</a>
     <a (click)="toPortfolio()" routerLink="/" fragment="portfolio" [ngClass]="activeLink == 'portfolio' ? 'active' : ''"  class="menu-item">Portfolio</a>

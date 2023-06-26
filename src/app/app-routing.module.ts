@@ -5,17 +5,25 @@ import { DataProtectionComponent } from './routing/data-protection/data-protecti
 import { PrivacyPolicyComponent } from './routing/privacy-policy/privacy-policy.component';
 import { MainpaneComponent } from './mainpane/mainpane.component';
 import { AppComponent } from './app.component';
+import { AipaneComponent } from './routing/aipane/aipane.component';
 
 const routes: Routes = [
-  {path: '', component: MainpaneComponent},
+  { path: '', component: MainpaneComponent },
   { path: 'imprint', component: ImprintComponent },
+  { path: 'ai', component: AipaneComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: 'data-protection', component: DataProtectionComponent }
+  { path: 'data-protection', component: DataProtectionComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
-export const routingComponents = [MainpaneComponent,ImprintComponent,PrivacyPolicyComponent,DataProtectionComponent]
+export class AppRoutingModule {}
+export const routingComponents = [
+  MainpaneComponent,
+  ImprintComponent,
+  PrivacyPolicyComponent,
+  DataProtectionComponent,
+  AipaneComponent,
+];

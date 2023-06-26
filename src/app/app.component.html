@@ -5,6 +5,7 @@
     position="end">
    
     <div class="mysidenav" >
+      <div><a (click)="toAi()" routerLink="" fragment="ai" [ngClass]="activeLink == 'ai' ? 'active' : ''" class="menu-item">AI Training</a></div>
       <div><a (click)="toAbout()" routerLink="" fragment="about" [ngClass]="activeLink == 'aboutme' ? 'active' : ''" class="menu-item">About me</a></div>
       <div><a (click)="toSkills()" routerLink="" fragment="skills" [ngClass]="activeLink == 'myskills' ? 'active' : ''" class="menu-item">My skills</a></div>
       <div><a (click)="toPortfolio()" routerLink="" fragment="portfolio" [ngClass]="activeLink == 'portfolio' ? 'active' : ''" class="menu-item">Portfolio</a></div>

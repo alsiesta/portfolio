@@ -34,6 +34,11 @@ export class HeaderComponent implements AfterViewInit {
     this.activeLink = "";
   }
 
+  toAi () {
+    this.router.navigateByUrl('/ai');
+    this.activeLink = 'ai';
+  }
+
   toAbout() {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
     this.activeLink = "aboutme"; 
