@@ -17,7 +17,8 @@
         </div>
         <div class="contact-btn-box-largescreen">
             <div class="contact-btn">
-                <a href="#contact" class="contact-btn">Get in touch</a>
+                <a (click)="toContact()" routerLink="/" fragment="contact" [ngClass]="activeLink == 'contact' ? 'active' : ''" class="contact-btn">Get in touch</a>
+                <!-- <a href="#contact" class="contact-btn">Get in touch</a> -->
             </div>
         </div>
     </div>
@@ -25,13 +26,8 @@
 </div>
 <div class="contact-btn-box-smallscreen">
     <div class="contact-btn">
-        <a href="#contact" class="contact-btn">Get in touch</a>
+        <a (click)="toContact()" routerLink="/" fragment="contact" [ngClass]="activeLink == 'contact' ? 'active' : ''" class="contact-btn">Get in touch</a>
+        <!-- <a href="#contact" class="contact-btn">Get in touch</a> -->
     </div>
 </div>
 
-<!-- <mat-card class="contact-btn-box">
-    <mat-card-content> -->
-
-<!--         
-    </mat-card-content>
-</mat-card> -->

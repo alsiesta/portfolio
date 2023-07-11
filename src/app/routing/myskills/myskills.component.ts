@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-myskills',
@@ -6,9 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./myskills.component.scss']
 })
 export class MyskillsComponent {
-
+  activeLink:string = "";
   arr: any = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-
+  constructor (private router: Router) { }
+  
+  toContact () {
+    this.router.navigateByUrl('/connect');
+    this.activeLink = "contact";   
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
+  }
+  
   skills: any = [
     {
       name: 'JavaScript',

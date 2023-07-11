@@ -14,6 +14,7 @@
   }
 }
 .icon-list {
+  margin-top: 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,8 +38,13 @@
       margin-top: 10px;
     }
   }
+  @media (max-width: $breakpointMedium) {
+    margin-top: 50px;
+
+  }
 }
 .headline-box {
+  margin-top: 150px;
   position: relative;
   display: flex;
   flex-direction: column;

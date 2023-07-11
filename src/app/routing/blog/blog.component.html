@@ -1,0 +1,19 @@
+<h1>Blog</h1>
+
+<div *ngFor="let post of blogPosts">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.content }}</p>
+</div>
+
+<hr>
+
+<h2>Neuer Blog-Beitrag</h2>
+
+<label for="title">Titel:</label>
+<input type="text" id="title" [(ngModel)]="newPostTitle">
+
+<label for="content">Inhalt:</label>
+<textarea id="content" [(ngModel)]="newPostContent"></textarea>
+
+<button (click)="addBlogPost()">Hinzufügen</button>
+

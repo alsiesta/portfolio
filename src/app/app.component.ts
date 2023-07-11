@@ -53,27 +53,45 @@ export class AppComponent {
     this.activeLink = 'ai';
   }
 
-  toAbout() {
-    this.sideNaviIsOpen = !this.sideNaviIsOpen;
-    this.activeLink = 'aboutme';
-  }
+  // toAbout() {
+  //   this.sideNaviIsOpen = !this.sideNaviIsOpen;
+  //   this.activeLink = 'aboutme';
+  // }
 
-  toSkills() {
-    document.getElementById('skills')?.scrollIntoView({behavior:'smooth' });
-    this.sideNaviIsOpen = !this.sideNaviIsOpen;
-    this.activeLink = 'myskills';
-  }
+  // toSkills() {
+  //   document.getElementById('skills')?.scrollIntoView({behavior:'smooth' });
+  //   this.sideNaviIsOpen = !this.sideNaviIsOpen;
+  //   this.activeLink = 'myskills';
+  // }
 
-  toPortfolio() {
-    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
-    this.sideNaviIsOpen = !this.sideNaviIsOpen;
-    this.activeLink = 'portfolio';
-  }
+  // toPortfolio() {
+  //   document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+  //   this.sideNaviIsOpen = !this.sideNaviIsOpen;
+  //   this.activeLink = 'portfolio';
+  // }
 
-  toContact() {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  toContact () {
+    this.router.navigateByUrl('/connect');
     this.sideNaviIsOpen = !this.sideNaviIsOpen;
     this.activeLink = 'contact';
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
+  }
+
+  toConnect () {
+    this.router.navigateByUrl('/connect');
+    this.sideNaviIsOpen = !this.sideNaviIsOpen;
+    this.activeLink = 'aboutme';
+    setTimeout(() => {
+      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
+  }
+
+  toFrontEndDev () {
+    this.router.navigateByUrl('/frontend-dev');
+    this.sideNaviIsOpen = !this.sideNaviIsOpen;
+    this.activeLink = 'frontend-dev';
   }
 }
 

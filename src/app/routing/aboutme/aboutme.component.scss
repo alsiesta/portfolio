@@ -10,7 +10,8 @@
 mat-card {
   // background-color: rgba(44, 255, 36, 0.356) !important;
   box-shadow: none;
-  padding-left: 30px;
+  padding-left: 60px;
+
 }
 
 mat-card-content {
@@ -27,6 +28,12 @@ mat-card-content {
   img {
     width: 50px;
   }
+
+}
+
+.spacer{
+  height: 200px;
+  width: 100%;
 }
 
 .mat-mdc-card-content {

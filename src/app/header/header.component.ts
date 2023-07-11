@@ -39,10 +39,18 @@ export class HeaderComponent implements AfterViewInit {
     this.activeLink = 'ai';
   }
 
-  toAbout() {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-    this.activeLink = "aboutme"; 
+  toConnect () {
+    this.router.navigateByUrl('/connect');
+    this.activeLink = 'aboutme';
+    setTimeout(() => {
+      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
   }
+
+  // toAbout() {
+  //   document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  //   this.activeLink = "aboutme"; 
+  // }
 
   toSkills() {
     document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
@@ -54,9 +62,18 @@ export class HeaderComponent implements AfterViewInit {
     this.activeLink = "portfolio";
   }
 
-  toContact() {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    this.activeLink = "contact"; 
+  toContact () {
+    this.router.navigateByUrl('/connect');
+    this.activeLink = "contact";   
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
+  }
+
+
+  toFrontEndDev () {
+    this.router.navigateByUrl('/frontend-dev');
+    this.activeLink = 'frontend-dev';
   }
 
   getLocation() {

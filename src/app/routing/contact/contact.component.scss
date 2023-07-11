@@ -8,6 +8,10 @@
 @import "/src/styles/utils/variables";
 @include textfield.core-styles;
 
+.mat-mdc-card-content {
+  padding: 0 60px;
+}
+
 .subtitle-normal-bold {
   color: $white;
 }

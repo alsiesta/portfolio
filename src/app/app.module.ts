@@ -20,6 +20,10 @@ import { PortfolioComponent } from './routing/portfolio/portfolio.component';
 import { ContactComponent } from './routing/contact/contact.component';
 import { SocialLinksComponent } from './shared/social-links/social-links.component';
 import { AipaneComponent } from './routing/aipane/aipane.component';
+import { BlogComponent } from './routing/blog/blog.component';
+import { FrontendDevComponent } from './routing/frontend-dev/frontend-dev.component';
+import { ConnectWithMeComponent } from './routing/connect-with-me/connect-with-me.component';
+import { IntroFrontendComponent } from './routing/intro-frontend/intro-frontend.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { AipaneComponent } from './routing/aipane/aipane.component';
     ContactComponent,
     SocialLinksComponent,
     AipaneComponent,
+    BlogComponent,
+    FrontendDevComponent,
+    ConnectWithMeComponent,
+    IntroFrontendComponent,
   ],
   imports: [
     BrowserModule,
