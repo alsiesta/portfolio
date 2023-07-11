@@ -1,6 +1,6 @@
 [
     {
-  "id": "1",
+  "id": 1,
   "headline": "Headline",
   "tags": ["tag1", "tag2"],
   "intro": "Intro",
@@ -11,7 +11,7 @@
   "linkGitCase": "http://www.google.com"
 },
 {
-    "id": "2",
+    "id": 2,
     "headline": "Headline",
     "tags": ["tag1", "tag2"],
     "intro": "Intro",
@@ -22,7 +22,7 @@
     "linkGitCase": "http://www.google.com"
   },    
   {
-    "id": "3",
+    "id": 3,
     "headline": "Headline",
     "tags": ["tag1", "tag2"],
     "intro": "Intro",

@@ -9,8 +9,8 @@ import * as blogPosts from 'src/app/shared/blogposts.json';
 })
   
 export class BlogComponent {
-  blogPosts = blogPosts;
-
+  blogPosts: BlogPost[] = blogPosts;
+  
   constructor () { }
   
   ngOnInit (): void {
@@ -20,7 +20,7 @@ export class BlogComponent {
   logPosts()  {
    for (let i = 0; i < this.blogPosts.length; i++) {
     const post = this.blogPosts[i];
-    console.log('My Post', i, post);
+    console.log('Post Nr:', i, post);
    }
   }
 }

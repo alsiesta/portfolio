@@ -1,7 +1,7 @@
 export class BlogPost {
   id: number;
   headline: string;
-  tags: string;
+  tags: string[];
   intro: string;
   img: string;
   copy: string;
