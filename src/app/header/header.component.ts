@@ -74,6 +74,9 @@ export class HeaderComponent implements AfterViewInit {
   toFrontEndDev () {
     this.router.navigateByUrl('/frontend-dev');
     this.activeLink = 'frontend-dev';
+    setTimeout(() => {
+      document.getElementById('frontend-dev')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
   }
 
   getLocation() {

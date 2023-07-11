@@ -24,6 +24,8 @@ import { BlogComponent } from './routing/blog/blog.component';
 import { FrontendDevComponent } from './routing/frontend-dev/frontend-dev.component';
 import { ConnectWithMeComponent } from './routing/connect-with-me/connect-with-me.component';
 import { IntroFrontendComponent } from './routing/intro-frontend/intro-frontend.component';
+import { BlogHeadComponent } from './routing/blog-head/blog-head.component';
+import { BlogPostComponent } from './shared/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { IntroFrontendComponent } from './routing/intro-frontend/intro-frontend.
     FrontendDevComponent,
     ConnectWithMeComponent,
     IntroFrontendComponent,
+    BlogHeadComponent,
+    BlogPostComponent,
   ],
   imports: [
     BrowserModule,

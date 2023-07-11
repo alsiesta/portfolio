@@ -1,0 +1,35 @@
+[
+    {
+  "id": "1",
+  "headline": "Headline",
+  "tags": ["tag1", "tag2"],
+  "intro": "Intro",
+  "img": "http://placehold.it/350x150",
+  "copy": "Copy",
+  "links": true,
+  "linkWebCase": "http://www.google.com",
+  "linkGitCase": "http://www.google.com"
+},
+{
+    "id": "2",
+    "headline": "Headline",
+    "tags": ["tag1", "tag2"],
+    "intro": "Intro",
+    "img": "http://placehold.it/350x150",
+    "copy": "Copy",
+    "links": true,
+    "linkWebCase": "http://www.google.com",
+    "linkGitCase": "http://www.google.com"
+  },    
+  {
+    "id": "3",
+    "headline": "Headline",
+    "tags": ["tag1", "tag2"],
+    "intro": "Intro",
+    "img": "http://placehold.it/350x150",
+    "copy": "Copy",
+    "links": true,
+    "linkWebCase": "http://www.google.com",
+    "linkGitCase": "http://www.google.com"
+  }
+]

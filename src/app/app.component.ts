@@ -92,6 +92,9 @@ export class AppComponent {
     this.router.navigateByUrl('/frontend-dev');
     this.sideNaviIsOpen = !this.sideNaviIsOpen;
     this.activeLink = 'frontend-dev';
+    setTimeout(() => {
+      document.getElementById('frontend-dev')?.scrollIntoView({ behavior: 'smooth' });
+    },  250);
   }
 }
 

@@ -1,30 +1,26 @@
 import { Component } from '@angular/core';
+import { BlogPost } from 'src/app/models/blog.class';
+import * as blogPosts from 'src/app/shared/blogposts.json';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
+  
 export class BlogComponent {
-  blogPosts: Array<any> = [];
-  newPostTitle: string = '';
-  newPostContent: string = '';
+  blogPosts = blogPosts;
 
-  constructor() { }
-
-  ngOnInit(): void {
-    // Hier können Sie vorhandene Blog-Posts aus einer Datenquelle laden, wenn gewünscht
+  constructor () { }
+  
+  ngOnInit (): void {
+    this.logPosts();
   }
-
-  addBlogPost(): void {
-    if (this.newPostTitle && this.newPostContent) {
-      const newPost = {
-        title: this.newPostTitle,
-        content: this.newPostContent
-      };
-      this.blogPosts.push(newPost);
-      this.newPostTitle = '';
-      this.newPostContent = '';
-    }
+  
+  logPosts()  {
+   for (let i = 0; i < this.blogPosts.length; i++) {
+    const post = this.blogPosts[i];
+    console.log('My Post', i, post);
+   }
   }
 }
